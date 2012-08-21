@@ -37,20 +37,20 @@
 		8FC14B3815E2EEF50039CA2C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8FC14B3A15E2EEF50039CA2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8FC14B3C15E2EEF50039CA2C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		8FC14B4015E2EEF50039CA2C /* Gamification-Info.plist */ = {isa = PBXFileReference; path = "Gamification-Info.plist"; sourceTree = "<group>"; };
+		8FC14B4015E2EEF50039CA2C /* Gamification-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Gamification-Info.plist"; sourceTree = "<group>"; };
 		8FC14B4215E2EEF50039CA2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8FC14B4415E2EEF50039CA2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8FC14B4615E2EEF50039CA2C /* Gamification-Prefix.pch */ = {isa = PBXFileReference; path = "Gamification-Prefix.pch"; sourceTree = "<group>"; };
-		8FC14B4715E2EEF50039CA2C /* GamificationAppDelegate.h */ = {isa = PBXFileReference; path = GamificationAppDelegate.h; sourceTree = "<group>"; };
+		8FC14B4615E2EEF50039CA2C /* Gamification-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gamification-Prefix.pch"; sourceTree = "<group>"; };
+		8FC14B4715E2EEF50039CA2C /* GamificationAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamificationAppDelegate.h; sourceTree = "<group>"; };
 		8FC14B4815E2EEF50039CA2C /* GamificationAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GamificationAppDelegate.m; sourceTree = "<group>"; };
 		8FC14B4B15E2EEF50039CA2C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		8FC14B4D15E2EEF50039CA2C /* GamificationViewController.h */ = {isa = PBXFileReference; path = GamificationViewController.h; sourceTree = "<group>"; };
+		8FC14B4D15E2EEF50039CA2C /* GamificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamificationViewController.h; sourceTree = "<group>"; };
 		8FC14B4E15E2EEF50039CA2C /* GamificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GamificationViewController.m; sourceTree = "<group>"; };
 		8FC14B5515E2EEF50039CA2C /* GamificationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GamificationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC14B5615E2EEF50039CA2C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		8FC14B5E15E2EEF50039CA2C /* GamificationTests-Info.plist */ = {isa = PBXFileReference; path = "GamificationTests-Info.plist"; sourceTree = "<group>"; };
+		8FC14B5E15E2EEF50039CA2C /* GamificationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GamificationTests-Info.plist"; sourceTree = "<group>"; };
 		8FC14B6015E2EEF50039CA2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8FC14B6215E2EEF50039CA2C /* GamificationTests.h */ = {isa = PBXFileReference; path = GamificationTests.h; sourceTree = "<group>"; };
+		8FC14B6215E2EEF50039CA2C /* GamificationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamificationTests.h; sourceTree = "<group>"; };
 		8FC14B6315E2EEF50039CA2C /* GamificationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GamificationTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
