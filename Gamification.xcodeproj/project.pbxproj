@@ -20,6 +20,8 @@
 		8FC14B5915E2EEF50039CA2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC14B3A15E2EEF50039CA2C /* Foundation.framework */; };
 		8FC14B6115E2EEF50039CA2C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FC14B5F15E2EEF50039CA2C /* InfoPlist.strings */; };
 		8FC14B6415E2EEF50039CA2C /* GamificationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14B6315E2EEF50039CA2C /* GamificationTests.m */; };
+		8FC14B7B15E34DAF0039CA2C /* GoalSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14B7A15E34DAF0039CA2C /* GoalSet.m */; };
+		8FC14B7C15E34DAF0039CA2C /* GoalSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14B7A15E34DAF0039CA2C /* GoalSet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		8FC14B6015E2EEF50039CA2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8FC14B6215E2EEF50039CA2C /* GamificationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamificationTests.h; sourceTree = "<group>"; };
 		8FC14B6315E2EEF50039CA2C /* GamificationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GamificationTests.m; sourceTree = "<group>"; };
+		8FC14B7915E34DAF0039CA2C /* GoalSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalSet.h; sourceTree = "<group>"; };
+		8FC14B7A15E34DAF0039CA2C /* GoalSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalSet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 				8FC14B4715E2EEF50039CA2C /* GamificationAppDelegate.h */,
 				8FC14B4815E2EEF50039CA2C /* GamificationAppDelegate.m */,
 				8FC14B4A15E2EEF50039CA2C /* MainStoryboard.storyboard */,
+				8FC14B7915E34DAF0039CA2C /* GoalSet.h */,
+				8FC14B7A15E34DAF0039CA2C /* GoalSet.m */,
 				8FC14B4D15E2EEF50039CA2C /* GamificationViewController.h */,
 				8FC14B4E15E2EEF50039CA2C /* GamificationViewController.m */,
 				8FC14B3F15E2EEF50039CA2C /* Supporting Files */,
@@ -260,6 +266,7 @@
 				8FC14B4515E2EEF50039CA2C /* main.m in Sources */,
 				8FC14B4915E2EEF50039CA2C /* GamificationAppDelegate.m in Sources */,
 				8FC14B4F15E2EEF50039CA2C /* GamificationViewController.m in Sources */,
+				8FC14B7B15E34DAF0039CA2C /* GoalSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FC14B6415E2EEF50039CA2C /* GamificationTests.m in Sources */,
+				8FC14B7C15E34DAF0039CA2C /* GoalSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
