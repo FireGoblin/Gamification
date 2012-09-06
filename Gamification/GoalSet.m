@@ -23,21 +23,16 @@
 @synthesize goalType = _goalType, goals = _goals;
 @synthesize expGain = _expGain, epicChance = _epicChance, rareChance = _rareChance, uncommonChance = _uncommonChance, commonChance = _commonChance;
 
-- (NSMutableArray *) getGoals
-{
-    return _goals;
-}
-
 //TODO: Add error checking
 
 - (void)addGoal:(NSString *)theGoal
 {
-    [[self getGoals] addObject:theGoal];
+    [[self goals] addObject:theGoal];
 }
 
 - (void)deleteGoal:(NSString *)theGoal
 {
-    [[self getGoals] removeObject:theGoal];
+    [[self goals] removeObject:theGoal];
 }
 
 - (NSString *)rollForReward

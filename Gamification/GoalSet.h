@@ -15,6 +15,6 @@
 
 - (void) addGoal:(NSString *)theGoal;
 - (void) deleteGoal:(NSString *)theGoal;
-- (void) rollForReward;
+- (NSString *) rollForReward;
 
 @end
