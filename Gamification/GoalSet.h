@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UserStatus.h"
 
 @interface GoalSet : NSObject
 
 @property (nonatomic, strong, readonly) NSString *goalType;
 @property (nonatomic, strong, readonly) NSMutableArray *goals;
+@property (nonatomic, strong, readonly) UserStatus *theUser;
+
 
 - (void) addGoal:(NSString *)theGoal;
 - (void) deleteGoal:(NSString *)theGoal;

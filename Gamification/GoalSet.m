@@ -20,7 +20,7 @@
 
 @implementation GoalSet
 
-@synthesize goalType = _goalType, goals = _goals;
+@synthesize goalType = _goalType, goals = _goal, theUser = _theUser;
 @synthesize expGain = _expGain, epicChance = _epicChance, rareChance = _rareChance, uncommonChance = _uncommonChance, commonChance = _commonChance;
 
 //TODO: Add error checking
@@ -39,13 +39,13 @@
 {
     long long ARC4RANDOM_MAX = 0x100000000;     
     double epicRoll = floorf((double)arc4random() / ARC4RANDOM_MAX);
-    if(epicRoll <= [self epicChance]) return [[NSString alloc] initWithCharacters:(const unichar *)"Epic" length:4];
+    if(epicRoll <= [self epicChance] * (1 + [[[self theUser] level] intValue] * 0.03 + [[[self theUser] stack] intValue] * 0.15)) return @"Epic";
     double rareRoll = floorf((double)arc4random() / ARC4RANDOM_MAX);
-    if(rareRoll <= [self rareChance]) return [[NSString alloc] initWithCharacters:(const unichar *)"Rare" length:4];
+    if(rareRoll <= [self rareChance] * (1 + [[[self theUser] level] intValue] * 0.03 + [[[self theUser] stack] intValue] * 0.15)) return @"Rare";
     double uncommonRoll = floorf((double)arc4random() /ARC4RANDOM_MAX);
-    if(uncommonRoll <= [self uncommonChance]) return [[NSString alloc] initWithCharacters:(const unichar *)"Uncommon" length:8];
+    if(uncommonRoll <= [self uncommonChance] * (1 + [[[self theUser] level] intValue] * 0.03 + [[[self theUser] stack] intValue] * 0.15)) return @"Uncommon";
     double commonRoll = floorf((double)arc4random() / ARC4RANDOM_MAX);
-    if(commonRoll <= [self commonChance]) return [[NSString alloc] initWithCharacters:(const unichar *)"Common" length:6];
+    if(commonRoll <= [self commonChance] * (1 + [[[self theUser] level] intValue] * 0.03 + [[[self theUser] stack] intValue] * 0.15)) return @"Common";
     
     return nil;
 }
