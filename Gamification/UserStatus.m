@@ -8,18 +8,14 @@
 
 #import "UserStatus.h"
 
-@interface UserStatus()
-
-@property (nonatomic, readonly) int maxCount;
-@property (nonatomic, readonly) NSTimeInterval timeToExpiration;
-
-
-@end
+static int const maxCount = 5;
+static NSTimeInterval const timeToExpiration = 1296000;
 
 @implementation UserStatus
 
-@synthesize maxCount = _maxCount, timeToExpiration = _timeToExpiration;
 @synthesize experience = _experience, level = _level, expToLevelMap = _expToLevelMap, stack = _stack, stackExpiration = _stackExpiration;
+
+
 
 - (void) setExperience:(NSNumber *)experience
 {
@@ -44,8 +40,8 @@
 - (void) incrementStack
 {
     int val = [[self stack] intValue];
-    [self setStack: [NSNumber numberWithInt:MIN([self maxCount], val + 1)] ];
-    [self setStackExpiration: [[NSDate date] dateByAddingTimeInterval:[self timeToExpiration]]];
+    [self setStack: [NSNumber numberWithInt:MIN(maxCount, val + 1)] ];
+    [self setStackExpiration: [[NSDate date] dateByAddingTimeInterval:timeToExpiration]];
 }
 
 - (void) checkTime
