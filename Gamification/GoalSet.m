@@ -57,7 +57,8 @@ int commonChance;
             chanceIndex = Epic;
         else
             ;//TODO: handle error
-    
+        
+        expGain = kExpGain[chanceIndex];
         commonChance = kCommonChance[chanceIndex];
         uncommonChance = kUncommonChance[chanceIndex];
         rareChance = kRareChance[chanceIndex];
@@ -103,7 +104,7 @@ int commonChance;
     double commonRoll = floorf((double)arc4random() / ARC4RANDOM_MAX);
     if(commonRoll <= commonChance * (1 + [self.theUser.level intValue] * kLevelValue + [[[self theUser] stack] intValue] * kStackValue)) return Common;
     
-    return nil;
+    return -1;
 }
 
 - (int)performGoal

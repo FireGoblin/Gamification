@@ -9,14 +9,27 @@
 #import "UserStatus.h"
 #import "Constants.h"
 
-static const int maxCount = kMaxCount;
-static const NSTimeInterval expirationTime = kExpirationTime;
-static const int * expToLevelMap = kExpToLevelMap;
-static const int maxLevel = kMaxLevel;
+int maxCount;
+NSTimeInterval expirationTime;
+int  expToLevelMap[51];
+int maxLevel;
 
 @implementation UserStatus
 
 @synthesize experience = _experience, level = _level, stack = _stack, stackExpiration = _stackExpiration;
+
+- (id)init
+{
+    self = [super init];
+    if(self)
+    {
+        maxCount = kMaxCount;
+        expirationTime = kExpirationTime;
+        memcpy(expToLevelMap, kExpToLevelMap, 51 * sizeof(int));
+        maxLevel = kMaxLevel;
+    }
+    return self;
+}
 
 - (NSNumber *)experience
 {

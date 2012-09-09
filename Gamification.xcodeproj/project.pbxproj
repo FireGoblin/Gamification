@@ -26,6 +26,8 @@
 		8FC14B8015E35C330039CA2C /* RewardSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14B7E15E35C330039CA2C /* RewardSet.m */; };
 		8FC14B8315FAD1920039CA2C /* UserStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14B8215FAD1920039CA2C /* UserStatus.m */; };
 		8FC14B8415FAD1920039CA2C /* UserStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14B8215FAD1920039CA2C /* UserStatus.m */; };
+		8FC14B8715FC81F10039CA2C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14B8615FC81F10039CA2C /* Constants.m */; };
+		8FC14B8815FC81F10039CA2C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14B8615FC81F10039CA2C /* Constants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,7 @@
 		8FC14B8115FAD1920039CA2C /* UserStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserStatus.h; sourceTree = "<group>"; };
 		8FC14B8215FAD1920039CA2C /* UserStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserStatus.m; sourceTree = "<group>"; };
 		8FC14B8515FB8F2B0039CA2C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		8FC14B8615FC81F10039CA2C /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,7 @@
 				8FC14B8115FAD1920039CA2C /* UserStatus.h */,
 				8FC14B8215FAD1920039CA2C /* UserStatus.m */,
 				8FC14B8515FB8F2B0039CA2C /* Constants.h */,
+				8FC14B8615FC81F10039CA2C /* Constants.m */,
 				8FC14B4D15E2EEF50039CA2C /* GamificationViewController.h */,
 				8FC14B4E15E2EEF50039CA2C /* GamificationViewController.m */,
 				8FC14B3F15E2EEF50039CA2C /* Supporting Files */,
@@ -283,6 +287,7 @@
 				8FC14B7B15E34DAF0039CA2C /* GoalSet.m in Sources */,
 				8FC14B7F15E35C330039CA2C /* RewardSet.m in Sources */,
 				8FC14B8315FAD1920039CA2C /* UserStatus.m in Sources */,
+				8FC14B8715FC81F10039CA2C /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +299,7 @@
 				8FC14B7C15E34DAF0039CA2C /* GoalSet.m in Sources */,
 				8FC14B8015E35C330039CA2C /* RewardSet.m in Sources */,
 				8FC14B8415FAD1920039CA2C /* UserStatus.m in Sources */,
+				8FC14B8815FC81F10039CA2C /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
