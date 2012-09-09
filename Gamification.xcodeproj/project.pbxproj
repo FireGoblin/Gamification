@@ -64,6 +64,7 @@
 		8FC14B7E15E35C330039CA2C /* RewardSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardSet.m; sourceTree = "<group>"; };
 		8FC14B8115FAD1920039CA2C /* UserStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserStatus.h; sourceTree = "<group>"; };
 		8FC14B8215FAD1920039CA2C /* UserStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserStatus.m; sourceTree = "<group>"; };
+		8FC14B8515FB8F2B0039CA2C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +131,7 @@
 				8FC14B7D15E35C330039CA2C /* RewardSet.h */,
 				8FC14B7E15E35C330039CA2C /* RewardSet.m */,
 				8FC14B7A15E34DAF0039CA2C /* GoalSet.m */,
+				8FC14B8515FB8F2B0039CA2C /* Constants.h */,
 				8FC14B8115FAD1920039CA2C /* UserStatus.h */,
 				8FC14B8215FAD1920039CA2C /* UserStatus.m */,
 				8FC14B4D15E2EEF50039CA2C /* GamificationViewController.h */,

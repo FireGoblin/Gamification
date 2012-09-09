@@ -12,12 +12,11 @@
 
 @property (nonatomic, strong, readonly) NSNumber * experience;
 @property (nonatomic, strong, readonly) NSNumber * level;
-@property (nonatomic, strong, readonly) NSArray * expToLevelMap;
 @property (nonatomic, strong, readonly) NSNumber * stack;
 @property (nonatomic, strong, readonly) NSDate * stackExpiration;
 
 - (void) incrementExp:(int) x;
 - (void) incrementStack;
-- (void) checkTime;
+- (bool) checkTime;
 
 @end

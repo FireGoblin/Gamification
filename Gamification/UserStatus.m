@@ -7,16 +7,44 @@
 //
 
 #import "UserStatus.h"
+#import "Constants.h"
 
-static int const maxCount = 5;
-static NSTimeInterval const timeToExpiration = 1296000;
+static const int maxCount = kMaxCount;
+static const NSTimeInterval expirationTime = kExpirationTime;
+static const int * expToLevelMap = kExpToLevelMap;
+static const int maxLevel = kMaxLevel;
 
 @implementation UserStatus
 
-@synthesize experience = _experience, level = _level, expToLevelMap = _expToLevelMap, stack = _stack, stackExpiration = _stackExpiration;
+@synthesize experience = _experience, level = _level, stack = _stack, stackExpiration = _stackExpiration;
+
+- (NSNumber *)experience
+{
+    if (!_experience) _experience = [NSNumber numberWithInt:0];
+    return _experience;
+}
+
+- (NSNumber *)level
+{
+    if(!_level) _level = [NSNumber numberWithInt:0];
+    return _level;
+}
+
+- (NSNumber *)stack
+{
+    if(!_stack) _stack = [NSNumber numberWithInt:0];
+    return _stack;
+}
+
+- (NSDate *)stackExpiration
+{
+    //initialization is arbitrary
+    if(!_stackExpiration) _stackExpiration = [NSDate date];
+    return _stackExpiration;
+}
 
 
-
+//private setter functions---------------------
 - (void) setExperience:(NSNumber *)experience
 {
     _experience = experience;
@@ -32,6 +60,8 @@ static NSTimeInterval const timeToExpiration = 1296000;
     _stackExpiration = stackExpiration;
 }
 
+//-----------------------------------
+
 - (void) incrementExp:(int)x
 {
     [self setExperience:[NSNumber numberWithUnsignedInt:[[self experience] unsignedIntValue] + x]];
@@ -39,17 +69,20 @@ static NSTimeInterval const timeToExpiration = 1296000;
      
 - (void) incrementStack
 {
-    int val = [[self stack] intValue];
+    int val = [self.stack intValue];
     [self setStack: [NSNumber numberWithInt:MIN(maxCount, val + 1)] ];
-    [self setStackExpiration: [[NSDate date] dateByAddingTimeInterval:timeToExpiration]];
+    [self setStackExpiration: [[NSDate date] dateByAddingTimeInterval:expirationTime]];
 }
 
-- (void) checkTime
+- (bool) checkTime
 {
-    if([[NSDate date] compare:[self stackExpiration]] == NSOrderedDescending)
+    if([(NSDate *)[NSDate date] compare:self.stackExpiration] == NSOrderedDescending)
     {
         [self setStack: [NSNumber numberWithInt:0]];
+        return true;
     }
+    
+    return false;
 }
 
 @end
