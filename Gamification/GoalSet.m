@@ -9,21 +9,61 @@
 #import "GoalSet.h"
 #import "Constants.h"
 
-int const expGain;
-int const epicChance;
-int const rareChance;
-int const uncommonChance;
-int const commonChance;
-
-
 @implementation GoalSet
 
-@synthesize goalType = _goalType, goals = _goal, theUser = _theUser;
+rarity chanceIndex;
+int expGain;
+int epicChance;
+int rareChance;
+int uncommonChance;
+int commonChance;
 
-//private setter
-- (void)setGoalType:(NSString *)goalType
+@synthesize goalType = _goalType, goals = _goals, theUser = _theUser;
+
+
+//private setters -----------------
+-(void) setGoalType:(NSString *)goalType
 {
     _goalType = goalType;
+}
+
+- (void)setTheUser:(UserStatus *)theUser
+{
+    _theUser = theUser;
+}
+
+- (void)setGoals:(NSMutableArray *)goals
+{
+    _goals = goals;
+}
+//----------------------------
+
+//must be called for proper initialization
+- (id) initWithType:(NSString *) type User:(UserStatus *) user
+{
+    self = [super init];
+    if(self){
+        self.goalType = type;
+        self.theUser = user;
+        self.goals = [[NSMutableArray alloc] init ];
+    
+        if(type == @"Common")
+            chanceIndex = Common;
+        else if(type == @"Uncommon")
+            chanceIndex = Uncommon;
+        else if(type == @"Rare")
+            chanceIndex = Rare;
+        else if(type == @"Epic")
+            chanceIndex = Epic;
+        else
+            ;//TODO: handle error
+    
+        commonChance = kCommonChance[chanceIndex];
+        uncommonChance = kUncommonChance[chanceIndex];
+        rareChance = kRareChance[chanceIndex];
+        epicChance = kEpicChance[chanceIndex];
+    }
+    return self;
 }
 
 //TODO: Add error checking

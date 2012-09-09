@@ -7,8 +7,28 @@
 //
 
 #import "GamificationViewController.h"
+#import "GoalSet.h"
+#import "RewardSet.h"
 
 @implementation GamificationViewController
+
+@synthesize theUser = _theUser, theGoals = _theGoals, theRewards = _theRewards;
+
+-(void) initVariables
+{
+    self.theUser = [[UserStatus alloc] init];
+    self.theGoals = [[NSMutableDictionary alloc] initWithCapacity:4];
+    [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Common" User:self.theUser] forKey:@"Common"];
+    [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Uncommon" User:self.theUser] forKey:@"Uncommon"];
+    [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Rare" User:self.theUser] forKey:@"Rare"];
+    [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Epic" User:self.theUser] forKey:@"Epic"];
+    
+    self.theRewards = [[NSMutableDictionary alloc] initWithCapacity:4];
+    [self.theRewards setObject:[[RewardSet alloc] init] forKey:@"Common"];
+    [self.theRewards setObject:[[RewardSet alloc] init] forKey:@"Uncommon"];
+    [self.theRewards setObject:[[RewardSet alloc] init] forKey:@"Rare"];
+    [self.theRewards setObject:[[RewardSet alloc] init] forKey:@"Epic"];
+}
 
 - (void)didReceiveMemoryWarning
 {
