@@ -9,6 +9,7 @@
 #import "GamificationViewController.h"
 #import "GoalSet.h"
 #import "RewardSet.h"
+#import "StatsViewController.h"
 
 @implementation GamificationViewController
 
@@ -16,18 +17,34 @@
 
 -(void) initVariables
 {
-    self.theUser = [[UserStatus alloc] init];
-    self.theGoals = [[NSMutableDictionary alloc] initWithCapacity:4];
-    [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Common" User:self.theUser] forKey:@"Common"];
-    [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Uncommon" User:self.theUser] forKey:@"Uncommon"];
-    [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Rare" User:self.theUser] forKey:@"Rare"];
-    [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Epic" User:self.theUser] forKey:@"Epic"];
-    
-    self.theRewards = [[NSMutableDictionary alloc] initWithCapacity:4];
-    [self.theRewards setObject:[[RewardSet alloc] init] forKey:@"Common"];
-    [self.theRewards setObject:[[RewardSet alloc] init] forKey:@"Uncommon"];
-    [self.theRewards setObject:[[RewardSet alloc] init] forKey:@"Rare"];
-    [self.theRewards setObject:[[RewardSet alloc] init] forKey:@"Epic"];
+    if(!self.theUser)
+    {
+        self.theUser = [[UserStatus alloc] init];
+    }
+    if(!self.theGoals)
+    {
+        self.theGoals = [[NSMutableDictionary alloc] initWithCapacity:4];
+        [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Common" User:self.theUser] forKey:@"Common"];
+        [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Uncommon" User:self.theUser] forKey:@"Uncommon"];
+        [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Rare" User:self.theUser] forKey:@"Rare"];
+        [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Epic" User:self.theUser] forKey:@"Epic"];
+    }
+    if(!self.theRewards)
+    {
+        self.theRewards = [[NSMutableDictionary alloc] initWithCapacity:4];
+        [self.theRewards setObject:[[RewardSet alloc] init] forKey:@"Common"];
+        [self.theRewards setObject:[[RewardSet alloc] init] forKey:@"Uncommon"];
+        [self.theRewards setObject:[[RewardSet alloc] init] forKey:@"Rare"];
+        [self.theRewards setObject:[[RewardSet alloc] init] forKey:@"Epic"];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"segueToCurrentStats"])
+    {
+        [segue.destinationViewController setup:self.theUser];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,6 +58,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self initVariables];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

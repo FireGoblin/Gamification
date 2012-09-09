@@ -18,5 +18,6 @@
 - (void) incrementExp:(int) x;
 - (void) incrementStack;
 - (bool) checkTime;
+- (float) getProgress;
 
 @end

@@ -33,26 +33,30 @@ int maxLevel;
 
 - (NSNumber *)experience
 {
-    if (!_experience) _experience = [NSNumber numberWithInt:0];
+    if (!_experience) _experience = [[NSNumber alloc] initWithInt:0];
     return _experience;
 }
 
 - (NSNumber *)level
 {
-    if(!_level) _level = [NSNumber numberWithInt:0];
+    if(!_level) _level = [[NSNumber alloc] initWithInt:0];
     return _level;
 }
 
 - (NSNumber *)stack
 {
-    if(!_stack) _stack = [NSNumber numberWithInt:0];
+    if(!_stack) _stack = [[NSNumber alloc] initWithInt:0];
     return _stack;
 }
 
 - (NSDate *)stackExpiration
 {
     //initialization is arbitrary
-    if(!_stackExpiration) _stackExpiration = [NSDate date];
+    if(!_stackExpiration)
+    {
+        _stackExpiration = [[NSDate alloc] init];
+        _stackExpiration = [NSDate date];
+    }
     return _stackExpiration;
 }
 
@@ -77,7 +81,7 @@ int maxLevel;
 
 - (void) incrementExp:(int)x
 {
-    [self setExperience:[NSNumber numberWithUnsignedInt:[[self experience] unsignedIntValue] + x]];
+    [self setExperience:[NSNumber numberWithUnsignedInt:MIN(expToLevelMap[maxLevel], [[self experience] unsignedIntValue] + x)]];
 }
      
 - (void) incrementStack
@@ -96,6 +100,11 @@ int maxLevel;
     }
     
     return false;
+}
+
+- (float) getProgress
+{
+    return (float) ([self.experience intValue] - expToLevelMap[[self.level intValue]]) / (expToLevelMap[[self.level intValue] + 1] - expToLevelMap[[self.level intValue]]);
 }
 
 @end
