@@ -7,6 +7,7 @@
 //
 
 #import "RewardSet.h"
+#import "Reward.h"
 
 @implementation RewardSet
 
@@ -50,12 +51,12 @@
 
 - (void) addReward:(NSString *)theReward
 {
-    [[self rewards] setObject:[NSNumber numberWithUnsignedInt:0] forKey:theReward];
+    [[self rewards] setObject:[NSNumber numberWithUnsignedInt:0] forKey:[[Reward alloc] initWithTitle:theReward]];
 }
 
 - (void) deleteReward:(NSString *)theReward
 {
-    [[self rewards] removeObjectForKey:theReward];
+    [[self rewards] removeObjectForKey:[[Reward alloc] initWithTitle:theReward]];
 }
 
 - (NSArray *) getRewards
