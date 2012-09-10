@@ -24,18 +24,20 @@
     if(!self.theGoals)
     {
         self.theGoals = [[NSMutableDictionary alloc] initWithCapacity:4];
-        [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Common" User:self.theUser] forKey:@"Common"];
-        [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Uncommon" User:self.theUser] forKey:@"Uncommon"];
-        [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Rare" User:self.theUser] forKey:@"Rare"];
+        [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Everyday" User:self.theUser] forKey:@"Everyday"];
+        [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Tiny" User:self.theUser] forKey:@"Tiny"];
+        [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Small" User:self.theUser] forKey:@"Small"];
+        [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Medium" User:self.theUser] forKey:@"Medium"];
+        [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Large" User:self.theUser] forKey:@"Large"];
         [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Epic" User:self.theUser] forKey:@"Epic"];
     }
     if(!self.theRewards)
     {
         self.theRewards = [[NSMutableDictionary alloc] initWithCapacity:4];
-        [self.theRewards setObject:[[RewardSet alloc] init] forKey:@"Common"];
-        [self.theRewards setObject:[[RewardSet alloc] init] forKey:@"Uncommon"];
-        [self.theRewards setObject:[[RewardSet alloc] init] forKey:@"Rare"];
-        [self.theRewards setObject:[[RewardSet alloc] init] forKey:@"Epic"];
+        [self.theRewards setObject:[[RewardSet alloc] initWithType:@"Common"] forKey:@"Common"];
+        [self.theRewards setObject:[[RewardSet alloc] initWithType:@"Uncommon"] forKey:@"Uncommon"];
+        [self.theRewards setObject:[[RewardSet alloc] initWithType:@"Rare"] forKey:@"Rare"];
+        [self.theRewards setObject:[[RewardSet alloc] initWithType:@"Legendary"] forKey:@"Legendary"];
     }
 }
 

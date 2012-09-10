@@ -11,11 +11,11 @@
 
 
 //GoalSet
-extern const int kExpGain[4];
-extern const double kCommonChance[4];
-extern const double kUncommonChance[4];
-extern const double kRareChance[4];
-extern const double kEpicChance[4];
+extern const int kExpGain[6];
+extern const double kCommonChance[6];
+extern const double kUncommonChance[6];
+extern const double kRareChance[6];
+extern const double kEpicChance[6];
 
 extern const NSTimeInterval kExpirationTime;
 extern const int kMaxCount;
@@ -26,10 +26,19 @@ extern const double kStackValue;
 extern const double kLevelValue;
 
 typedef enum{
+    Everyday,
+    Tiny,
+    Small,
+    Medium,
+    Large,
+    Epic
+} goalsize;
+
+typedef enum{
     Common,
     Uncommon,
     Rare,
-    Epic
+    Legendary
 } rarity;
 
 #endif

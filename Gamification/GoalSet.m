@@ -11,9 +11,9 @@
 
 @implementation GoalSet
 
-rarity chanceIndex;
+goalsize chanceIndex;
 int expGain;
-int epicChance;
+int legendaryChance;
 int rareChance;
 int uncommonChance;
 int commonChance;
@@ -47,12 +47,16 @@ int commonChance;
         self.theUser = user;
         self.goals = [[NSMutableArray alloc] init ];
     
-        if(type == @"Common")
-            chanceIndex = Common;
-        else if(type == @"Uncommon")
-            chanceIndex = Uncommon;
-        else if(type == @"Rare")
-            chanceIndex = Rare;
+        if(type == @"Everyday")
+            chanceIndex = Everyday;
+        else if(type == @"Tiny")
+            chanceIndex = Tiny;
+        else if(type == @"Small")
+            chanceIndex = Small;
+        else if(type == @"Medium")
+            chanceIndex = Medium;
+        else if(type == @"Large")
+            chanceIndex = Large;
         else if(type == @"Epic")
             chanceIndex = Epic;
         else
@@ -62,7 +66,7 @@ int commonChance;
         commonChance = kCommonChance[chanceIndex];
         uncommonChance = kUncommonChance[chanceIndex];
         rareChance = kRareChance[chanceIndex];
-        epicChance = kEpicChance[chanceIndex];
+        legendaryChance = kEpicChance[chanceIndex];
     }
     return self;
 }
@@ -96,7 +100,7 @@ int commonChance;
 {
     long long ARC4RANDOM_MAX = 0x100000000;     
     double epicRoll = floorf((double)arc4random() / ARC4RANDOM_MAX);
-    if(epicRoll <= epicChance * (1 + [self.theUser.level intValue] * kLevelValue + [[[self theUser] stack] intValue] * kStackValue)) return Epic;
+    if(epicRoll <= legendaryChance * (1 + [self.theUser.level intValue] * kLevelValue + [[[self theUser] stack] intValue] * kStackValue)) return Legendary;
     double rareRoll = floorf((double)arc4random() / ARC4RANDOM_MAX);
     if(rareRoll <= rareChance * (1 + [self.theUser.level intValue] * kLevelValue + [[[self theUser] stack] intValue] * kStackValue)) return Rare;
     double uncommonRoll = floorf((double)arc4random() /ARC4RANDOM_MAX);

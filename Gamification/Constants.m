@@ -9,12 +9,12 @@
 #include "Constants.h"
 
 //GoalSet
-const int kExpGain[4] = {1, 10, 100, 1000};
+const int kExpGain[6] = {1, 10, 100, 1000};
 
-const double kCommonChance[4] = {.1, .01, .001, .0001};
-const double kUncommonChance[4] = {.5, .1, .01, .001};
-const double kRareChance[4] = {1, .5, .1, .01};
-const double kEpicChance[4] = {1, 1, .5, .1};
+const double kCommonChance[6] = {.1, .01, .001, .0001};
+const double kUncommonChance[6] = {.5, .1, .01, .001};
+const double kRareChance[6] = {1, .5, .1, .01};
+const double kEpicChance[6] = {1, 1, .5, .1};
 
 
 //UserStatus

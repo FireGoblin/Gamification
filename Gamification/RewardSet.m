@@ -12,6 +12,27 @@
 
 @synthesize rewards = _rewards, rewardType = _rewardType;
 
+- (void)setRewardType:(NSString *)rewardType
+{
+    _rewardType = rewardType;
+}
+
+- (void)setRewards:(NSMutableDictionary *)rewards
+{
+    _rewards = rewards;
+}
+
+- (id) initWithType:(NSString *)type
+{
+    self = [super init];
+    if(self)
+    {
+        self.rewardType = type;
+        self.rewards = [[NSMutableDictionary alloc] init];
+    }
+    return self;
+}
+
 - (void) useReward:(NSString *)theReward
 {
     unsigned int holder = [[[self rewards] valueForKey:theReward] unsignedIntValue];

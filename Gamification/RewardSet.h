@@ -18,5 +18,6 @@
 
 - (void) addReward:(NSString *)theReward;
 - (void) deleteReward:(NSString *)theReward;
+- (id) initWithType:(NSString *)type;
 
 @end
