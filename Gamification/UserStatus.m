@@ -77,11 +77,24 @@ int maxLevel;
     _stackExpiration = stackExpiration;
 }
 
+- (void) setLevel:(NSNumber *)level
+{
+    _level = level;
+}
+
 //-----------------------------------
 
 - (void) incrementExp:(int)x
 {
     [self setExperience:[NSNumber numberWithUnsignedInt:MIN(expToLevelMap[maxLevel], [[self experience] unsignedIntValue] + x)]];
+    int currentLevel = [self.level intValue];
+    if(currentLevel == maxLevel) return;
+    int nextLevel = currentLevel;
+    while (nextLevel == currentLevel) {
+        nextLevel++;
+        if ([self.experience intValue] >= expToLevelMap[nextLevel]) currentLevel = nextLevel;
+    }
+    self.level = [NSNumber numberWithInt:currentLevel];
 }
      
 - (void) incrementStack
@@ -104,6 +117,7 @@ int maxLevel;
 
 - (float) getProgress
 {
+    if([self.level intValue] == maxLevel) return 0.0;
     return (float) ([self.experience intValue] - expToLevelMap[[self.level intValue]]) / (expToLevelMap[[self.level intValue] + 1] - expToLevelMap[[self.level intValue]]);
 }
 
