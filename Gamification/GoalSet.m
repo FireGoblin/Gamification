@@ -8,6 +8,7 @@
 
 #import "GoalSet.h"
 #import "Constants.h"
+#import "Goal.h"
 
 @implementation GoalSet
 
@@ -81,12 +82,12 @@ int commonChance;
 
 - (void)addGoal:(NSString *)theGoal
 {
-    [self.goals addObject:theGoal];
+    [self.goals addObject:[[Goal alloc] initWithTitle:theGoal]];
 }
 
 - (void)deleteGoal:(NSString *)theGoal
 {
-    [self.goals removeObject:theGoal];
+    [self.goals removeObject:[[Goal alloc] initWithTitle:theGoal]];
 }
 
 //private

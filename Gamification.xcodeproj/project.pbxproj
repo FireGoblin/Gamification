@@ -30,6 +30,8 @@
 		8FC14B8815FC81F10039CA2C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14B8615FC81F10039CA2C /* Constants.m */; };
 		8FC14B8F15FD12610039CA2C /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14B8E15FD12610039CA2C /* StatsViewController.m */; };
 		8FC14B9015FD12610039CA2C /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14B8E15FD12610039CA2C /* StatsViewController.m */; };
+		8FC14BAB15FE709C0039CA2C /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BAA15FE709B0039CA2C /* Goal.m */; };
+		8FC14BAC15FE709C0039CA2C /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BAA15FE709B0039CA2C /* Goal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		8FC14B8615FC81F10039CA2C /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		8FC14B8D15FD12600039CA2C /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
 		8FC14B8E15FD12610039CA2C /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
+		8FC14BA915FE709B0039CA2C /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
+		8FC14BAA15FE709B0039CA2C /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,8 @@
 		8FC14B3E15E2EEF50039CA2C /* Gamification */ = {
 			isa = PBXGroup;
 			children = (
+				8FC14BA915FE709B0039CA2C /* Goal.h */,
+				8FC14BAA15FE709B0039CA2C /* Goal.m */,
 				8FC14B4715E2EEF50039CA2C /* GamificationAppDelegate.h */,
 				8FC14B4815E2EEF50039CA2C /* GamificationAppDelegate.m */,
 				8FC14B4A15E2EEF50039CA2C /* MainStoryboard.storyboard */,
@@ -295,6 +301,7 @@
 				8FC14B8315FAD1920039CA2C /* UserStatus.m in Sources */,
 				8FC14B8715FC81F10039CA2C /* Constants.m in Sources */,
 				8FC14B8F15FD12610039CA2C /* StatsViewController.m in Sources */,
+				8FC14BAB15FE709C0039CA2C /* Goal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +315,7 @@
 				8FC14B8415FAD1920039CA2C /* UserStatus.m in Sources */,
 				8FC14B8815FC81F10039CA2C /* Constants.m in Sources */,
 				8FC14B9015FD12610039CA2C /* StatsViewController.m in Sources */,
+				8FC14BAC15FE709C0039CA2C /* Goal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
