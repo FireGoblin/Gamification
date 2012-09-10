@@ -34,6 +34,10 @@
 		8FC14BAC15FE709C0039CA2C /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BAA15FE709B0039CA2C /* Goal.m */; };
 		8FC14BAF15FE745A0039CA2C /* Reward.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BAE15FE745A0039CA2C /* Reward.m */; };
 		8FC14BB015FE745A0039CA2C /* Reward.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BAE15FE745A0039CA2C /* Reward.m */; };
+		8FC14BB315FE76050039CA2C /* GoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BB215FE76040039CA2C /* GoalsViewController.m */; };
+		8FC14BB415FE76050039CA2C /* GoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BB215FE76040039CA2C /* GoalsViewController.m */; };
+		8FC14BB715FE76230039CA2C /* RewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BB615FE76230039CA2C /* RewardsViewController.m */; };
+		8FC14BB815FE76230039CA2C /* RewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BB615FE76230039CA2C /* RewardsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,10 @@
 		8FC14BAA15FE709B0039CA2C /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
 		8FC14BAD15FE745A0039CA2C /* Reward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reward.h; sourceTree = "<group>"; };
 		8FC14BAE15FE745A0039CA2C /* Reward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reward.m; sourceTree = "<group>"; };
+		8FC14BB115FE76040039CA2C /* GoalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalsViewController.h; sourceTree = "<group>"; };
+		8FC14BB215FE76040039CA2C /* GoalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalsViewController.m; sourceTree = "<group>"; };
+		8FC14BB515FE76220039CA2C /* RewardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardsViewController.h; sourceTree = "<group>"; };
+		8FC14BB615FE76230039CA2C /* RewardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +160,10 @@
 				8FC14B7A15E34DAF0039CA2C /* GoalSet.m */,
 				8FC14B8115FAD1920039CA2C /* UserStatus.h */,
 				8FC14B8215FAD1920039CA2C /* UserStatus.m */,
+				8FC14BB115FE76040039CA2C /* GoalsViewController.h */,
+				8FC14BB215FE76040039CA2C /* GoalsViewController.m */,
+				8FC14BB515FE76220039CA2C /* RewardsViewController.h */,
+				8FC14BB615FE76230039CA2C /* RewardsViewController.m */,
 				8FC14B8515FB8F2B0039CA2C /* Constants.h */,
 				8FC14B8615FC81F10039CA2C /* Constants.m */,
 				8FC14B8D15FD12600039CA2C /* StatsViewController.h */,
@@ -309,6 +321,8 @@
 				8FC14B8F15FD12610039CA2C /* StatsViewController.m in Sources */,
 				8FC14BAB15FE709C0039CA2C /* Goal.m in Sources */,
 				8FC14BAF15FE745A0039CA2C /* Reward.m in Sources */,
+				8FC14BB315FE76050039CA2C /* GoalsViewController.m in Sources */,
+				8FC14BB715FE76230039CA2C /* RewardsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +338,8 @@
 				8FC14B9015FD12610039CA2C /* StatsViewController.m in Sources */,
 				8FC14BAC15FE709C0039CA2C /* Goal.m in Sources */,
 				8FC14BB015FE745A0039CA2C /* Reward.m in Sources */,
+				8FC14BB415FE76050039CA2C /* GoalsViewController.m in Sources */,
+				8FC14BB815FE76230039CA2C /* RewardsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -91,15 +91,15 @@ int maxLevel;
     [self setStackExpiration: [[NSDate date] dateByAddingTimeInterval:expirationTime]];
 }
 
-- (bool) checkTime
+- (BOOL) checkTime
 {
     if([(NSDate *)[NSDate date] compare:self.stackExpiration] == NSOrderedDescending)
     {
         [self setStack: [NSNumber numberWithInt:0]];
-        return true;
+        return TRUE;
     }
     
-    return false;
+    return FALSE;
 }
 
 - (float) getProgress

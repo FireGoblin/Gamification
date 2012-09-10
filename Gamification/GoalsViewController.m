@@ -1,25 +1,16 @@
 //
-//  StatsViewController.m
+//  GoalsViewController.m
 //  Gamification
 //
-//  Created by Michael Overstreet on 9/9/12.
+//  Created by Michael Overstreet on 9/10/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "StatsViewController.h"
+#import "GoalsViewController.h"
 
-@implementation StatsViewController
+@implementation GoalsViewController
 
 @synthesize dataSource = _dataSource;
-@synthesize level = _level;
-@synthesize progress = _progress;
-@synthesize stacks = _stacks;
-@synthesize timeLeft = _timeLeft;
-
-- (void) setup:(id <StatsViewDataSource>)dataSource
-{
-    self.dataSource = dataSource;
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -55,20 +46,8 @@
 }
 */
 
-- (void)viewDidLoad
-{
-    self.level.text = self.dataSource.theUser.level.stringValue;
-    self.stacks.text = self.dataSource.theUser.stack.stringValue;
-    self.timeLeft.text = self.dataSource.theUser.stackExpiration.description;
-    self.progress.progress = self.dataSource.theUser.getProgress;
-}
-
 - (void)viewDidUnload
 {
-    [self setLevel:nil];
-    [self setProgress:nil];
-    [self setStacks:nil];
-    [self setTimeLeft:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

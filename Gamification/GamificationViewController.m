@@ -10,7 +10,6 @@
 #import "GoalSet.h"
 #import "RewardSet.h"
 #import "StatsViewController.h"
-#import "CompleteGoalsViewController.h"
 
 @implementation GamificationViewController
 
@@ -46,11 +45,7 @@
 {
     if([segue.identifier isEqualToString:@"segueToCurrentStats"])
     {
-        [(StatsViewController *) segue.destinationViewController setup:self.theUser];
-    }
-    else if([segue.identifier isEqualToString:@"segueToCompleteGoals"])
-    {
-        [(CompleteGoalsViewController *) segue.destinationViewController setup:self.theGoals];
+        [(StatsViewController *) segue.destinationViewController setup:self];
     }
 }
 

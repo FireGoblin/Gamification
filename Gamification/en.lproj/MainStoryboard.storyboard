@@ -130,7 +130,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Rewards" id="lQK-13-QUc"/>
                     <connections>
-                        <segue destination="bkw-hV-IJC" kind="push" id="kkX-rV-prD"/>
+                        <segue destination="bkw-hV-IJC" kind="push" identifier="segueToSpecificRewards" id="kkX-rV-prD"/>
                     </connections>
                 </viewController>
             </objects>
@@ -328,7 +328,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Goals" id="e7r-t3-Ixi"/>
                     <connections>
-                        <segue destination="vee-el-dxQ" kind="push" id="I3d-mV-Tbs"/>
+                        <segue destination="vee-el-dxQ" kind="push" identifier="segueToSepcificGoals" id="I3d-mV-Tbs"/>
                     </connections>
                 </viewController>
             </objects>
@@ -582,9 +582,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="&quot;X&quot; Reward" id="Qyy-m3-e9Z"/>
                     <connections>
-                        <segue destination="aN1-3y-Kay" kind="push" id="bWa-Ri-Q51"/>
-                        <segue destination="fUD-Av-Srn" kind="push" id="5GC-Oc-VxZ"/>
-                        <segue destination="opx-47-fju" kind="push" id="V4b-1g-pCb"/>
+                        <segue destination="aN1-3y-Kay" kind="push" identifier="segueToDeleteReward" id="bWa-Ri-Q51"/>
+                        <segue destination="fUD-Av-Srn" kind="push" identifier="segueToUseReward" id="5GC-Oc-VxZ"/>
+                        <segue destination="opx-47-fju" kind="push" identifier="segueToAddReward" id="V4b-1g-pCb"/>
                     </connections>
                 </viewController>
             </objects>
@@ -750,14 +750,8 @@
         </scene>
     </scenes>
     <classes>
-        <class className="CompleteGoalsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CompleteGoalsViewController.h"/>
-        </class>
         <class className="GamificationViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GamificationViewController.h"/>
-        </class>
-        <class className="SetRewardsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SetRewardsViewController.h"/>
         </class>
         <class className="StatsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/StatsViewController.h"/>

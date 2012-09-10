@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "UserStatus.h"
+#import "GoalsViewController.h"
+#import "RewardsViewController.h"
+#import "StatsViewController.h"
 
-@interface GamificationViewController : UIViewController
+@interface GamificationViewController : UIViewController <GoalsViewDataSource, RewardsViewDataSource, StatsViewDataSource>
 
 @property(nonatomic, strong)UserStatus *theUser;
 @property(nonatomic, strong)NSMutableDictionary *theGoals;

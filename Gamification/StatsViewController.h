@@ -9,14 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "UserStatus.h"
 
+@protocol StatsViewDataSource <NSObject>
+@property (nonatomic, strong) UserStatus *theUser;
+@end
+
 @interface StatsViewController : UIViewController
 
-@property (strong, nonatomic) UserStatus *theUser;
 @property (strong, nonatomic) IBOutlet UILabel *level;
 @property (strong, nonatomic) IBOutlet UIProgressView *progress;
 @property (strong, nonatomic) IBOutlet UILabel *stacks;
 @property (strong, nonatomic) IBOutlet UILabel *timeLeft;
 
-- (void) setup:(UserStatus *)theUser;
+@property (strong, nonatomic) id <StatsViewDataSource> dataSource;
+
+-(void)setup:(id <StatsViewDataSource>)dataSource;
 
 @end
