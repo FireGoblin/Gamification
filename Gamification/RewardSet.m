@@ -11,7 +11,7 @@
 
 @implementation RewardSet
 
-@synthesize rewards = _rewards, rewardType = _rewardType;
+@synthesize rewards = _rewards, rewardType = _rewardType, size = _size;
 
 - (void)setRewardType:(NSString *)rewardType
 {
@@ -23,6 +23,11 @@
     _rewards = rewards;
 }
 
+- (void)setSize:(int)size
+{
+    _size = size;
+}
+
 - (id) initWithType:(NSString *)type
 {
     self = [super init];
@@ -30,6 +35,7 @@
     {
         self.rewardType = type;
         self.rewards = [[NSMutableDictionary alloc] init];
+        self.size = 0;
     }
     return self;
 }
@@ -52,11 +58,13 @@
 - (void) addReward:(NSString *)theReward
 {
     [[self rewards] setObject:[NSNumber numberWithUnsignedInt:0] forKey:[[Reward alloc] initWithTitle:theReward]];
+    self.size++;
 }
 
 - (void) deleteReward:(NSString *)theReward
 {
     [[self rewards] removeObjectForKey:[[Reward alloc] initWithTitle:theReward]];
+    self.size--;
 }
 
 - (NSArray *) getRewards

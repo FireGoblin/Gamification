@@ -84,13 +84,13 @@
         <scene sceneID="uJf-JE-V7n">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etc-Al-fAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="SH3-2G-5nR" sceneMemberID="viewController">
+                <viewController id="SH3-2G-5nR" customClass="RewardsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TuU-kc-iUd">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Jxv-vy-f8Z">
-                                <rect key="frame" x="20" y="31" width="280" height="113"/>
+                                <rect key="frame" x="20" y="30" width="280" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Use Reward">
@@ -100,9 +100,12 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="SH3-2G-5nR" eventType="touchUpInside" id="qxR-1T-Fi1"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lWO-Ku-Vtd">
-                                <rect key="frame" x="20" y="152" width="280" height="110"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WSq-Zp-PTM">
+                                <rect key="frame" x="20" y="151" width="280" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Add Reward">
@@ -112,9 +115,12 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="SH3-2G-5nR" eventType="touchUpInside" id="5iv-i0-wN0"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iQM-mb-ueP">
-                                <rect key="frame" x="20" y="270" width="280" height="104"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qma-Bq-a7m">
+                                <rect key="frame" x="20" y="278" width="280" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Delete Reward">
@@ -124,6 +130,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="SH3-2G-5nR" eventType="touchUpInside" id="HAT-i6-jyJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -282,7 +291,7 @@
         <scene sceneID="tsB-HN-pPp">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m1d-Wx-vCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="i6U-52-1EI" sceneMemberID="viewController">
+                <viewController id="i6U-52-1EI" customClass="GoalsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nD8-lf-1iE">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -298,9 +307,12 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="i6U-52-1EI" eventType="touchUpInside" id="XWb-8X-P8A"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KUW-wF-bOd">
-                                <rect key="frame" x="20" y="163" width="280" height="98"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tcz-Ps-kVV">
+                                <rect key="frame" x="20" y="155" width="280" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Add Goal">
@@ -310,9 +322,12 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="i6U-52-1EI" eventType="touchUpInside" id="661-yB-avT"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MbS-9m-gRh">
-                                <rect key="frame" x="20" y="282" width="280" height="92"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jlq-Oq-uTb">
+                                <rect key="frame" x="20" y="278" width="280" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Delete Goal">
@@ -322,13 +337,16 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="i6U-52-1EI" eventType="touchUpInside" id="hT1-bP-mkL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Goals" id="e7r-t3-Ixi"/>
                     <connections>
-                        <segue destination="vee-el-dxQ" kind="push" identifier="segueToSepcificGoals" id="I3d-mV-Tbs"/>
+                        <segue destination="vee-el-dxQ" kind="push" identifier="segueToSpecificGoals" id="I3d-mV-Tbs"/>
                     </connections>
                 </viewController>
             </objects>
@@ -337,7 +355,7 @@
         <scene sceneID="g9p-ld-f8X">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1d-X9-II0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="vee-el-dxQ" customClass="CompleteGoalsViewController" sceneMemberID="viewController">
+                <viewController id="vee-el-dxQ" customClass="SpecificGoalsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5bk-nr-2R0">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -414,42 +432,42 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="j0P-Sw-tMH">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="j0P-Sw-tMH">
                                 <rect key="frame" x="54" y="129" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="U2m-5i-s5b">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="U2m-5i-s5b">
                                 <rect key="frame" x="223" y="129" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="Y4H-Vl-iYR">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Y4H-Vl-iYR">
                                 <rect key="frame" x="54" y="244" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="t60-Fz-6Gk">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="t60-Fz-6Gk">
                                 <rect key="frame" x="223" y="244" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="Pk5-S3-PSc">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Pk5-S3-PSc">
                                 <rect key="frame" x="223" y="357" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="SfM-Fn-v5A">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="SfM-Fn-v5A">
                                 <rect key="frame" x="54" y="357" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -461,6 +479,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="&quot;X&quot; Goal" id="qIb-xf-nuy"/>
                     <connections>
+                        <outlet property="epicLabel" destination="Pk5-S3-PSc" id="LPj-lw-XBU"/>
+                        <outlet property="everydayLabel" destination="j0P-Sw-tMH" id="bZP-eK-xeb"/>
+                        <outlet property="largeLabel" destination="SfM-Fn-v5A" id="fZo-iV-w1D"/>
+                        <outlet property="mediumLabel" destination="t60-Fz-6Gk" id="Lba-Ue-ykY"/>
+                        <outlet property="smallLabel" destination="Y4H-Vl-iYR" id="WFP-F6-8Gp"/>
+                        <outlet property="tinyLabel" destination="U2m-5i-s5b" id="v1w-Pk-mhU"/>
+                        <outlet property="viewTitle" destination="qIb-xf-nuy" id="6VB-Da-azI"/>
                         <segue destination="hY3-GP-lrz" kind="push" identifier="segueToCompleteGoal" id="NiD-4e-nX5"/>
                         <segue destination="IiB-g0-Z1I" kind="push" identifier="segueToDeleteGoal" id="waJ-Mu-pKa"/>
                         <segue destination="IPR-jr-fT3" kind="push" identifier="segueToAddGoal" id="vPN-cf-gEC"/>
@@ -524,7 +549,7 @@
         <scene sceneID="ZTI-6r-ZX8">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pY6-eP-7qj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="bkw-hV-IJC" customClass="SetRewardsViewController" sceneMemberID="viewController">
+                <viewController id="bkw-hV-IJC" customClass="SpecificRewardsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B9r-ea-Po7">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -569,7 +594,7 @@
                                 <rect key="frame" x="174" y="218" width="126" height="146"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Epic">
+                                <state key="normal" title="Legendary">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -577,11 +602,44 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="1DY-yT-6rx">
+                                <rect key="frame" x="62" y="135" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="dJb-o2-oum">
+                                <rect key="frame" x="216" y="135" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="OBS-0G-ufA">
+                                <rect key="frame" x="62" y="314" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Q1I-Ky-MwD">
+                                <rect key="frame" x="216" y="314" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="&quot;X&quot; Reward" id="Qyy-m3-e9Z"/>
                     <connections>
+                        <outlet property="commonLabel" destination="1DY-yT-6rx" id="FBs-Mn-lgU"/>
+                        <outlet property="legendaryLabel" destination="Q1I-Ky-MwD" id="pU7-k5-aWp"/>
+                        <outlet property="rareLabel" destination="OBS-0G-ufA" id="v6a-47-2Ta"/>
+                        <outlet property="uncommonLabel" destination="dJb-o2-oum" id="qjV-nY-NRO"/>
+                        <outlet property="viewTitle" destination="Qyy-m3-e9Z" id="krQ-eY-6PZ"/>
                         <segue destination="aN1-3y-Kay" kind="push" identifier="segueToDeleteReward" id="bWa-Ri-Q51"/>
                         <segue destination="fUD-Av-Srn" kind="push" identifier="segueToUseReward" id="5GC-Oc-VxZ"/>
                         <segue destination="opx-47-fju" kind="push" identifier="segueToAddReward" id="V4b-1g-pCb"/>
@@ -752,6 +810,34 @@
     <classes>
         <class className="GamificationViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GamificationViewController.h"/>
+        </class>
+        <class className="GoalsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalsViewController.h"/>
+        </class>
+        <class className="RewardsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RewardsViewController.h"/>
+        </class>
+        <class className="SpecificGoalsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SpecificGoalsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="epicLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="everydayLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="largeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mediumLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="smallLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tinyLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="viewTitle" candidateClass="UINavigationItem"/>
+            </relationships>
+        </class>
+        <class className="SpecificRewardsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SpecificRewardsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="commonLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="legendaryLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="rareLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="uncommonLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="viewTitle" candidateClass="UINavigationItem"/>
+            </relationships>
         </class>
         <class className="StatsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/StatsViewController.h"/>

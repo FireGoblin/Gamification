@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @protocol RewardsViewDataSource <NSObject>
+-(NSDictionary *)rewardCounts;
 @end
 
 @interface RewardsViewController : UIViewController
 
 @property (nonatomic, weak) id <RewardsViewDataSource> dataSource;
+
+-(void)setup:(id <RewardsViewDataSource>)dataSource;
 
 @end

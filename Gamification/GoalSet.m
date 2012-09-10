@@ -19,7 +19,7 @@ int rareChance;
 int uncommonChance;
 int commonChance;
 
-@synthesize goalType = _goalType, goals = _goals, theUser = _theUser;
+@synthesize goalType = _goalType, goals = _goals, theUser = _theUser, size = _size;
 
 
 //private setters -----------------
@@ -37,6 +37,11 @@ int commonChance;
 {
     _goals = goals;
 }
+
+- (void)setSize:(int)size
+{
+    _size = size;
+}
 //----------------------------
 
 //must be called for proper initialization
@@ -47,6 +52,7 @@ int commonChance;
         self.goalType = type;
         self.theUser = user;
         self.goals = [[NSMutableArray alloc] init ];
+        self.size = 0;
     
         if(type == @"Everyday")
             chanceIndex = Everyday;
@@ -83,11 +89,13 @@ int commonChance;
 - (void)addGoal:(NSString *)theGoal
 {
     [self.goals addObject:[[Goal alloc] initWithTitle:theGoal]];
+    self.size++;
 }
 
 - (void)deleteGoal:(NSString *)theGoal
 {
     [self.goals removeObject:[[Goal alloc] initWithTitle:theGoal]];
+    self.size--;
 }
 
 //private

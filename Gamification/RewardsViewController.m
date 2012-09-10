@@ -7,11 +7,33 @@
 //
 
 #import "RewardsViewController.h"
+#import "SpecificRewardsViewController.h"
 
 @implementation RewardsViewController
 
 @synthesize dataSource = _dataSource;
 
+-(void)setup:(id<RewardsViewDataSource>)dataSource
+{
+    self.dataSource = dataSource;
+}
+
+- (IBAction)buttonPressed:(id)sender {
+    [self performSegueWithIdentifier:@"segueToSpecificRewards" sender:sender];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([((UIButton *) sender).titleLabel.text isEqualToString: @"Add Reward"])
+        [(SpecificRewardsViewController *) segue.destinationViewController setup:self.dataSource withInstruction:@"Add"];
+    else if([((UIButton *) sender).titleLabel.text isEqualToString: @"Use Reward"])
+        [(SpecificRewardsViewController *) segue.destinationViewController setup:self.dataSource withInstruction:@"Use"];
+    else if([((UIButton *) sender).titleLabel.text isEqualToString: @"Delete Reward"])
+        [(SpecificRewardsViewController *) segue.destinationViewController setup:self.dataSource withInstruction:@"Delete"];
+    else
+        ; //TODO: handle error
+    
+}
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

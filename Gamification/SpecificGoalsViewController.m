@@ -1,38 +1,28 @@
 //
-//  GoalsViewController.m
+//  SpecificGoalsViewController.m
 //  Gamification
 //
 //  Created by Michael Overstreet on 9/10/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "GoalsViewController.h"
 #import "SpecificGoalsViewController.h"
 
-@implementation GoalsViewController : UIViewController
-
+@implementation SpecificGoalsViewController
+@synthesize everydayLabel;
+@synthesize tinyLabel;
+@synthesize smallLabel;
+@synthesize mediumLabel;
+@synthesize largeLabel;
+@synthesize epicLabel;
+@synthesize viewTitle;
 @synthesize dataSource = _dataSource;
+@synthesize instruction = _instruction;
 
--(void)setup:(id<GoalsViewDataSource>)dataSource
+-(void) setup:(id <GoalsViewDataSource>)dataSource withInstruction:(NSString *)instruction
 {
     self.dataSource = dataSource;
-}
-
-- (IBAction)buttonPressed:(id)sender {
-    [self performSegueWithIdentifier:@"segueToSpecificGoals" sender:sender];
-}
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if([((UIButton *) sender).titleLabel.text isEqualToString: @"Add Goal"])
-        [(SpecificGoalsViewController *) segue.destinationViewController setup:self.dataSource withInstruction:@"Add"];
-    else if([((UIButton *) sender).titleLabel.text isEqualToString: @"Complete Goal"])
-        [(SpecificGoalsViewController *) segue.destinationViewController setup:self.dataSource withInstruction:@"Complete"];
-    else if([((UIButton *) sender).titleLabel.text isEqualToString: @"Delete Goal"])
-        [(SpecificGoalsViewController *) segue.destinationViewController setup:self.dataSource withInstruction:@"Delete"];
-    else
-        ; //TODO: handle error
-    
+    self.instruction = instruction;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -61,16 +51,31 @@
 }
 */
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSDictionary *holder = [[NSDictionary alloc ] initWithDictionary:[self.dataSource goalCounts]];
+    everydayLabel.text = [[holder objectForKey:@"Everyday"] stringValue];
+    tinyLabel.text = [[holder objectForKey:@"Tiny"] stringValue];
+    smallLabel.text = [[holder objectForKey:@"Small"] stringValue];
+    mediumLabel.text = [[holder objectForKey:@"Medium"] stringValue];
+    largeLabel.text = [[holder objectForKey:@"Large"] stringValue];
+    epicLabel.text = [[holder objectForKey:@"Epic"] stringValue];
+    viewTitle.title = [self.instruction stringByAppendingString:@" Goal"];
 }
-*/
+
 
 - (void)viewDidUnload
 {
+    [self setEverydayLabel:nil];
+    [self setTinyLabel:nil];
+    [self setSmallLabel:nil];
+    [self setMediumLabel:nil];
+    [self setLargeLabel:nil];
+    [self setEpicLabel:nil];
+    [self setViewTitle:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

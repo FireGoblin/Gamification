@@ -38,6 +38,10 @@
 		8FC14BB415FE76050039CA2C /* GoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BB215FE76040039CA2C /* GoalsViewController.m */; };
 		8FC14BB715FE76230039CA2C /* RewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BB615FE76230039CA2C /* RewardsViewController.m */; };
 		8FC14BB815FE76230039CA2C /* RewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BB615FE76230039CA2C /* RewardsViewController.m */; };
+		8FC14BBB15FE8DA90039CA2C /* SpecificGoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BBA15FE8DA80039CA2C /* SpecificGoalsViewController.m */; };
+		8FC14BBC15FE8DA90039CA2C /* SpecificGoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BBA15FE8DA80039CA2C /* SpecificGoalsViewController.m */; };
+		8FC14BBF15FE8DCB0039CA2C /* SpecificRewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BBE15FE8DCA0039CA2C /* SpecificRewardsViewController.m */; };
+		8FC14BC015FE8DCB0039CA2C /* SpecificRewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BBE15FE8DCA0039CA2C /* SpecificRewardsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +92,10 @@
 		8FC14BB215FE76040039CA2C /* GoalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalsViewController.m; sourceTree = "<group>"; };
 		8FC14BB515FE76220039CA2C /* RewardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardsViewController.h; sourceTree = "<group>"; };
 		8FC14BB615FE76230039CA2C /* RewardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardsViewController.m; sourceTree = "<group>"; };
+		8FC14BB915FE8DA80039CA2C /* SpecificGoalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecificGoalsViewController.h; sourceTree = "<group>"; };
+		8FC14BBA15FE8DA80039CA2C /* SpecificGoalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecificGoalsViewController.m; sourceTree = "<group>"; };
+		8FC14BBD15FE8DCA0039CA2C /* SpecificRewardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecificRewardsViewController.h; sourceTree = "<group>"; };
+		8FC14BBE15FE8DCA0039CA2C /* SpecificRewardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecificRewardsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +177,10 @@
 				8FC14B8D15FD12600039CA2C /* StatsViewController.h */,
 				8FC14B8E15FD12610039CA2C /* StatsViewController.m */,
 				8FC14B4D15E2EEF50039CA2C /* GamificationViewController.h */,
+				8FC14BB915FE8DA80039CA2C /* SpecificGoalsViewController.h */,
+				8FC14BBA15FE8DA80039CA2C /* SpecificGoalsViewController.m */,
+				8FC14BBD15FE8DCA0039CA2C /* SpecificRewardsViewController.h */,
+				8FC14BBE15FE8DCA0039CA2C /* SpecificRewardsViewController.m */,
 				8FC14B4E15E2EEF50039CA2C /* GamificationViewController.m */,
 				8FC14B3F15E2EEF50039CA2C /* Supporting Files */,
 			);
@@ -323,6 +335,8 @@
 				8FC14BAF15FE745A0039CA2C /* Reward.m in Sources */,
 				8FC14BB315FE76050039CA2C /* GoalsViewController.m in Sources */,
 				8FC14BB715FE76230039CA2C /* RewardsViewController.m in Sources */,
+				8FC14BBB15FE8DA90039CA2C /* SpecificGoalsViewController.m in Sources */,
+				8FC14BBF15FE8DCB0039CA2C /* SpecificRewardsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +354,8 @@
 				8FC14BB015FE745A0039CA2C /* Reward.m in Sources */,
 				8FC14BB415FE76050039CA2C /* GoalsViewController.m in Sources */,
 				8FC14BB815FE76230039CA2C /* RewardsViewController.m in Sources */,
+				8FC14BBC15FE8DA90039CA2C /* SpecificGoalsViewController.m in Sources */,
+				8FC14BC015FE8DCB0039CA2C /* SpecificRewardsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

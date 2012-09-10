@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @protocol GoalsViewDataSource <NSObject>
+-(NSDictionary *)goalCounts;
 @end
 
 @interface GoalsViewController : UIViewController
 
 @property (nonatomic, weak) id <GoalsViewDataSource> dataSource;
+
+-(void)setup:(id <GoalsViewDataSource>)dataSource;
 
 @end

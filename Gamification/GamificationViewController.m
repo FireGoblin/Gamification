@@ -23,7 +23,7 @@
     }
     if(!self.theGoals)
     {
-        self.theGoals = [[NSMutableDictionary alloc] initWithCapacity:4];
+        self.theGoals = [[NSMutableDictionary alloc] initWithCapacity:6];
         [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Everyday" User:self.theUser] forKey:@"Everyday"];
         [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Tiny" User:self.theUser] forKey:@"Tiny"];
         [self.theGoals setObject:[[GoalSet alloc] initWithType:@"Small" User:self.theUser] forKey:@"Small"];
@@ -41,11 +41,41 @@
     }
 }
 
+-(NSDictionary *)rewardCounts
+{
+    NSMutableDictionary *retVal = [[NSMutableDictionary alloc] initWithCapacity:4];
+    [retVal setObject:[[NSNumber alloc] initWithInt:((RewardSet *)[self.theRewards objectForKey:@"Common"]).size] forKey:@"Common"];
+    [retVal setObject:[[NSNumber alloc] initWithInt:((RewardSet *)[self.theRewards objectForKey:@"Uncommon"]).size] forKey:@"Uncommon"];
+    [retVal setObject:[[NSNumber alloc] initWithInt:((RewardSet *)[self.theRewards objectForKey:@"Rare"]).size] forKey:@"Rare"];
+    [retVal setObject:[[NSNumber alloc] initWithInt:((RewardSet *)[self.theRewards objectForKey:@"Legendary"]).size] forKey:@"Legendary"];
+    return retVal;
+}
+
+-(NSDictionary *)goalCounts
+{
+    NSMutableDictionary *retVal = [[NSMutableDictionary alloc] initWithCapacity:4];
+    [retVal setObject:[[NSNumber alloc] initWithInt:((GoalSet *)[self.theGoals objectForKey:@"Everyday"]).size] forKey:@"Everyday"];
+    [retVal setObject:[[NSNumber alloc] initWithInt:((GoalSet *)[self.theGoals objectForKey:@"Tiny"]).size] forKey:@"Tiny"];
+    [retVal setObject:[[NSNumber alloc] initWithInt:((GoalSet *)[self.theGoals objectForKey:@"Small"]).size] forKey:@"Small"];
+    [retVal setObject:[[NSNumber alloc] initWithInt:((GoalSet *)[self.theGoals objectForKey:@"Medium"]).size] forKey:@"Medium"];
+    [retVal setObject:[[NSNumber alloc] initWithInt:((GoalSet *)[self.theGoals objectForKey:@"Large"]).size] forKey:@"Large"];
+    [retVal setObject:[[NSNumber alloc] initWithInt:((GoalSet *)[self.theGoals objectForKey:@"Epic"]).size] forKey:@"Epic"];
+    return retVal;
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([segue.identifier isEqualToString:@"segueToCurrentStats"])
     {
         [(StatsViewController *) segue.destinationViewController setup:self];
+    }
+    else if([segue.identifier isEqualToString:@"segueToRewards"])
+    {
+        [(RewardsViewController *) segue.destinationViewController setup:self];
+    }
+    else if([segue.identifier isEqualToString:@"segueToGoals"])
+    {
+        [(GoalsViewController *) segue.destinationViewController setup:self];
     }
 }
 
@@ -60,7 +90,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self initVariables];
+    if(!self.theUser)
+        [self initVariables];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

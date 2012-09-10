@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong, readonly) NSString *rewardType;
 @property (nonatomic, strong, readonly) NSMutableDictionary *rewards;
+@property (nonatomic, readonly) int size;
 
 - (void) useReward:(NSString *)theReward;
 - (NSString *) earnRandomReward;
