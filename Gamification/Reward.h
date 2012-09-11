@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Reward : NSObject
+@interface Reward : NSObject <NSCopying>
 
 @property (nonatomic, strong)NSString *title;
 

@@ -12,7 +12,7 @@
 
 @synthesize title = _title;
 
-- (id) initWithTitle:(id)title
+- (id) initWithTitle:(NSString *)title
 {
     self = [super init];
     if (self) {
@@ -32,6 +32,12 @@
     
     //backup, should not hit
     return FALSE;
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    Reward *copy = [[[self class] allocWithZone:zone] initWithTitle:self.title];
+    return copy;
 }
 
 @end

@@ -42,6 +42,10 @@
 		8FC14BBC15FE8DA90039CA2C /* SpecificGoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BBA15FE8DA80039CA2C /* SpecificGoalsViewController.m */; };
 		8FC14BBF15FE8DCB0039CA2C /* SpecificRewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BBE15FE8DCA0039CA2C /* SpecificRewardsViewController.m */; };
 		8FC14BC015FE8DCB0039CA2C /* SpecificRewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BBE15FE8DCA0039CA2C /* SpecificRewardsViewController.m */; };
+		8FC14BC315FEADBB0039CA2C /* AddGoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BC215FEADBB0039CA2C /* AddGoalsViewController.m */; };
+		8FC14BC415FEADBB0039CA2C /* AddGoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BC215FEADBB0039CA2C /* AddGoalsViewController.m */; };
+		8FC14BC715FEADEA0039CA2C /* AddRewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BC615FEADEA0039CA2C /* AddRewardsViewController.m */; };
+		8FC14BC815FEADEA0039CA2C /* AddRewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BC615FEADEA0039CA2C /* AddRewardsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +100,10 @@
 		8FC14BBA15FE8DA80039CA2C /* SpecificGoalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecificGoalsViewController.m; sourceTree = "<group>"; };
 		8FC14BBD15FE8DCA0039CA2C /* SpecificRewardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecificRewardsViewController.h; sourceTree = "<group>"; };
 		8FC14BBE15FE8DCA0039CA2C /* SpecificRewardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecificRewardsViewController.m; sourceTree = "<group>"; };
+		8FC14BC115FEADBB0039CA2C /* AddGoalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddGoalsViewController.h; sourceTree = "<group>"; };
+		8FC14BC215FEADBB0039CA2C /* AddGoalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGoalsViewController.m; sourceTree = "<group>"; };
+		8FC14BC515FEADEA0039CA2C /* AddRewardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRewardsViewController.h; sourceTree = "<group>"; };
+		8FC14BC615FEADEA0039CA2C /* AddRewardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRewardsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,33 +163,37 @@
 		8FC14B3E15E2EEF50039CA2C /* Gamification */ = {
 			isa = PBXGroup;
 			children = (
+				8FC14B4A15E2EEF50039CA2C /* MainStoryboard.storyboard */,
+				8FC14B4715E2EEF50039CA2C /* GamificationAppDelegate.h */,
+				8FC14B4815E2EEF50039CA2C /* GamificationAppDelegate.m */,
+				8FC14B8515FB8F2B0039CA2C /* Constants.h */,
+				8FC14B8615FC81F10039CA2C /* Constants.m */,
 				8FC14BA915FE709B0039CA2C /* Goal.h */,
 				8FC14BAA15FE709B0039CA2C /* Goal.m */,
 				8FC14BAD15FE745A0039CA2C /* Reward.h */,
 				8FC14BAE15FE745A0039CA2C /* Reward.m */,
-				8FC14B4715E2EEF50039CA2C /* GamificationAppDelegate.h */,
-				8FC14B4815E2EEF50039CA2C /* GamificationAppDelegate.m */,
-				8FC14B4A15E2EEF50039CA2C /* MainStoryboard.storyboard */,
-				8FC14B7D15E35C330039CA2C /* RewardSet.h */,
-				8FC14B7E15E35C330039CA2C /* RewardSet.m */,
 				8FC14B7915E34DAF0039CA2C /* GoalSet.h */,
 				8FC14B7A15E34DAF0039CA2C /* GoalSet.m */,
+				8FC14B7D15E35C330039CA2C /* RewardSet.h */,
+				8FC14B7E15E35C330039CA2C /* RewardSet.m */,
 				8FC14B8115FAD1920039CA2C /* UserStatus.h */,
 				8FC14B8215FAD1920039CA2C /* UserStatus.m */,
+				8FC14B4D15E2EEF50039CA2C /* GamificationViewController.h */,
+				8FC14B4E15E2EEF50039CA2C /* GamificationViewController.m */,
 				8FC14BB115FE76040039CA2C /* GoalsViewController.h */,
 				8FC14BB215FE76040039CA2C /* GoalsViewController.m */,
 				8FC14BB515FE76220039CA2C /* RewardsViewController.h */,
 				8FC14BB615FE76230039CA2C /* RewardsViewController.m */,
-				8FC14B8515FB8F2B0039CA2C /* Constants.h */,
-				8FC14B8615FC81F10039CA2C /* Constants.m */,
 				8FC14B8D15FD12600039CA2C /* StatsViewController.h */,
 				8FC14B8E15FD12610039CA2C /* StatsViewController.m */,
-				8FC14B4D15E2EEF50039CA2C /* GamificationViewController.h */,
 				8FC14BB915FE8DA80039CA2C /* SpecificGoalsViewController.h */,
 				8FC14BBA15FE8DA80039CA2C /* SpecificGoalsViewController.m */,
 				8FC14BBD15FE8DCA0039CA2C /* SpecificRewardsViewController.h */,
 				8FC14BBE15FE8DCA0039CA2C /* SpecificRewardsViewController.m */,
-				8FC14B4E15E2EEF50039CA2C /* GamificationViewController.m */,
+				8FC14BC115FEADBB0039CA2C /* AddGoalsViewController.h */,
+				8FC14BC215FEADBB0039CA2C /* AddGoalsViewController.m */,
+				8FC14BC515FEADEA0039CA2C /* AddRewardsViewController.h */,
+				8FC14BC615FEADEA0039CA2C /* AddRewardsViewController.m */,
 				8FC14B3F15E2EEF50039CA2C /* Supporting Files */,
 			);
 			path = Gamification;
@@ -337,6 +349,8 @@
 				8FC14BB715FE76230039CA2C /* RewardsViewController.m in Sources */,
 				8FC14BBB15FE8DA90039CA2C /* SpecificGoalsViewController.m in Sources */,
 				8FC14BBF15FE8DCB0039CA2C /* SpecificRewardsViewController.m in Sources */,
+				8FC14BC315FEADBB0039CA2C /* AddGoalsViewController.m in Sources */,
+				8FC14BC715FEADEA0039CA2C /* AddRewardsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +370,8 @@
 				8FC14BB815FE76230039CA2C /* RewardsViewController.m in Sources */,
 				8FC14BBC15FE8DA90039CA2C /* SpecificGoalsViewController.m in Sources */,
 				8FC14BC015FE8DCB0039CA2C /* SpecificRewardsViewController.m in Sources */,
+				8FC14BC415FEADBB0039CA2C /* AddGoalsViewController.m in Sources */,
+				8FC14BC815FEADEA0039CA2C /* AddRewardsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

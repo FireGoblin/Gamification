@@ -57,13 +57,13 @@
 
 - (void) addReward:(NSString *)theReward
 {
-    [[self rewards] setObject:[NSNumber numberWithUnsignedInt:0] forKey:[[Reward alloc] initWithTitle:theReward]];
+    [self.rewards setObject:[[NSNumber alloc] initWithUnsignedInt:0] forKey:[[Reward alloc] initWithTitle:theReward]];
     self.size++;
 }
 
 - (void) deleteReward:(NSString *)theReward
 {
-    [[self rewards] removeObjectForKey:[[Reward alloc] initWithTitle:theReward]];
+    [self.rewards removeObjectForKey:[[Reward alloc] initWithTitle:theReward]];
     self.size--;
 }
 

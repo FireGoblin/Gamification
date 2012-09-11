@@ -199,7 +199,7 @@
                             <outlet property="delegate" destination="fUD-Av-Srn" id="vkh-d1-rzd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Use &quot;X&quot; Reward" id="9HQ-Xu-Tk8"/>
+                    <navigationItem key="navigationItem" title="Use &quot;X&quot; Rewards" id="9HQ-Xu-Tk8"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1697" y="378"/>
@@ -371,8 +371,18 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vee-el-dxQ" eventType="touchUpInside" id="cER-D5-zEH"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jKO-DO-xUO">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="j0P-Sw-tMH">
+                                <rect key="frame" x="54" y="129" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6Ka-vt-XUl">
                                 <rect key="frame" x="189" y="70" width="111" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -383,9 +393,12 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vee-el-dxQ" eventType="touchUpInside" id="ucr-FW-Udx"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zY9-Pi-uQD">
-                                <rect key="frame" x="20" y="184" width="111" height="92"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="w3j-60-oCW">
+                                <rect key="frame" x="20" y="175" width="111" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Small">
@@ -395,9 +408,12 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vee-el-dxQ" eventType="touchUpInside" id="WOC-H8-bcF"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cTB-fh-5WY">
-                                <rect key="frame" x="189" y="184" width="111" height="92"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AZD-O9-EcH">
+                                <rect key="frame" x="189" y="175" width="111" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Medium">
@@ -407,9 +423,12 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vee-el-dxQ" eventType="touchUpInside" id="0kY-hA-ZNr"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XJF-XR-dmd">
-                                <rect key="frame" x="20" y="299" width="111" height="92"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GLo-49-mhc">
+                                <rect key="frame" x="20" y="280" width="111" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Large">
@@ -419,9 +438,12 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vee-el-dxQ" eventType="touchUpInside" id="x9u-QK-Wmg"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lxF-6s-tPS">
-                                <rect key="frame" x="189" y="299" width="111" height="92"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="T1a-dy-raq">
+                                <rect key="frame" x="189" y="280" width="111" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Epic">
@@ -431,44 +453,40 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vee-el-dxQ" eventType="touchUpInside" id="YRB-2s-1mw"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="j0P-Sw-tMH">
-                                <rect key="frame" x="54" y="129" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="U2m-5i-s5b">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="yve-jT-ix9">
                                 <rect key="frame" x="223" y="129" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Y4H-Vl-iYR">
-                                <rect key="frame" x="54" y="244" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="vEr-6h-8HB">
+                                <rect key="frame" x="54" y="233" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="t60-Fz-6Gk">
-                                <rect key="frame" x="223" y="244" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="RDL-ZR-7pR">
+                                <rect key="frame" x="223" y="233" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Pk5-S3-PSc">
-                                <rect key="frame" x="223" y="357" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="BXh-qd-pNz">
+                                <rect key="frame" x="54" y="341" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="SfM-Fn-v5A">
-                                <rect key="frame" x="54" y="357" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="1ta-IE-H2v">
+                                <rect key="frame" x="223" y="341" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -477,18 +495,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="&quot;X&quot; Goal" id="qIb-xf-nuy"/>
+                    <navigationItem key="navigationItem" title="&quot;X&quot; Goals" id="qIb-xf-nuy"/>
                     <connections>
-                        <outlet property="epicLabel" destination="Pk5-S3-PSc" id="LPj-lw-XBU"/>
+                        <outlet property="epicLabel" destination="1ta-IE-H2v" id="t2T-j8-PSm"/>
                         <outlet property="everydayLabel" destination="j0P-Sw-tMH" id="bZP-eK-xeb"/>
-                        <outlet property="largeLabel" destination="SfM-Fn-v5A" id="fZo-iV-w1D"/>
-                        <outlet property="mediumLabel" destination="t60-Fz-6Gk" id="Lba-Ue-ykY"/>
-                        <outlet property="smallLabel" destination="Y4H-Vl-iYR" id="WFP-F6-8Gp"/>
-                        <outlet property="tinyLabel" destination="U2m-5i-s5b" id="v1w-Pk-mhU"/>
+                        <outlet property="largeLabel" destination="BXh-qd-pNz" id="BIN-uz-DCU"/>
+                        <outlet property="mediumLabel" destination="RDL-ZR-7pR" id="ryE-R4-6z6"/>
+                        <outlet property="smallLabel" destination="vEr-6h-8HB" id="KoQ-oI-una"/>
+                        <outlet property="tinyLabel" destination="yve-jT-ix9" id="y7X-Hw-gL3"/>
                         <outlet property="viewTitle" destination="qIb-xf-nuy" id="6VB-Da-azI"/>
-                        <segue destination="hY3-GP-lrz" kind="push" identifier="segueToCompleteGoal" id="NiD-4e-nX5"/>
-                        <segue destination="IiB-g0-Z1I" kind="push" identifier="segueToDeleteGoal" id="waJ-Mu-pKa"/>
-                        <segue destination="IPR-jr-fT3" kind="push" identifier="segueToAddGoal" id="vPN-cf-gEC"/>
+                        <segue destination="hY3-GP-lrz" kind="push" identifier="segueToCompleteGoals" id="NiD-4e-nX5"/>
+                        <segue destination="IiB-g0-Z1I" kind="push" identifier="segueToDeleteGoals" id="waJ-Mu-pKa"/>
+                        <segue destination="IPR-jr-fT3" kind="push" identifier="segueToAddGoals" id="vPN-cf-gEC"/>
                     </connections>
                 </viewController>
             </objects>
@@ -527,7 +545,7 @@
                             <outlet property="delegate" destination="IiB-g0-Z1I" id="VqU-We-roc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Delete &quot;X&quot; Goal" id="5Ik-Vw-nSN"/>
+                    <navigationItem key="navigationItem" title="Delete &quot;X&quot; Goals" id="5Ik-Vw-nSN"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1697" y="-219"/>
@@ -565,9 +583,19 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="bkw-hV-IJC" eventType="touchUpInside" id="cJE-Ob-LBX"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eYQ-Cn-28w">
-                                <rect key="frame" x="174" y="36" width="126" height="146"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="1DY-yT-6rx">
+                                <rect key="frame" x="62" y="135" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ot7-ZX-YEl">
+                                <rect key="frame" x="163" y="36" width="126" height="146"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Uncommon">
@@ -577,9 +605,12 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="bkw-hV-IJC" eventType="touchUpInside" id="dyM-eK-NHg"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="F1H-S3-Hff">
-                                <rect key="frame" x="20" y="218" width="126" height="146"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fkH-MO-4Fu">
+                                <rect key="frame" x="20" y="227" width="126" height="146"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Rare">
@@ -589,9 +620,12 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="bkw-hV-IJC" eventType="touchUpInside" id="E0r-8P-HwW"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="O68-yk-trM">
-                                <rect key="frame" x="174" y="218" width="126" height="146"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hAU-SG-TsL">
+                                <rect key="frame" x="163" y="227" width="126" height="146"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Legendary">
@@ -601,30 +635,26 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="bkw-hV-IJC" eventType="touchUpInside" id="55B-LB-pga"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="1DY-yT-6rx">
-                                <rect key="frame" x="62" y="135" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="v2b-OA-Nqv">
+                                <rect key="frame" x="205" y="135" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="dJb-o2-oum">
-                                <rect key="frame" x="216" y="135" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="kqg-H9-gb3">
+                                <rect key="frame" x="205" y="322" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="OBS-0G-ufA">
-                                <rect key="frame" x="62" y="314" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Q1I-Ky-MwD">
-                                <rect key="frame" x="216" y="314" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="rcz-gQ-pe8">
+                                <rect key="frame" x="62" y="322" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -633,16 +663,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="&quot;X&quot; Reward" id="Qyy-m3-e9Z"/>
+                    <navigationItem key="navigationItem" title="&quot;X&quot; Rewards" id="Qyy-m3-e9Z"/>
                     <connections>
                         <outlet property="commonLabel" destination="1DY-yT-6rx" id="FBs-Mn-lgU"/>
-                        <outlet property="legendaryLabel" destination="Q1I-Ky-MwD" id="pU7-k5-aWp"/>
-                        <outlet property="rareLabel" destination="OBS-0G-ufA" id="v6a-47-2Ta"/>
-                        <outlet property="uncommonLabel" destination="dJb-o2-oum" id="qjV-nY-NRO"/>
+                        <outlet property="legendaryLabel" destination="kqg-H9-gb3" id="n4m-JR-iwT"/>
+                        <outlet property="rareLabel" destination="rcz-gQ-pe8" id="cY3-Fr-03I"/>
+                        <outlet property="uncommonLabel" destination="v2b-OA-Nqv" id="1Rv-jv-cdy"/>
                         <outlet property="viewTitle" destination="Qyy-m3-e9Z" id="krQ-eY-6PZ"/>
-                        <segue destination="aN1-3y-Kay" kind="push" identifier="segueToDeleteReward" id="bWa-Ri-Q51"/>
-                        <segue destination="fUD-Av-Srn" kind="push" identifier="segueToUseReward" id="5GC-Oc-VxZ"/>
-                        <segue destination="opx-47-fju" kind="push" identifier="segueToAddReward" id="V4b-1g-pCb"/>
+                        <segue destination="aN1-3y-Kay" kind="push" identifier="segueToDeleteRewards" id="bWa-Ri-Q51"/>
+                        <segue destination="fUD-Av-Srn" kind="push" identifier="segueToUseRewards" id="5GC-Oc-VxZ"/>
+                        <segue destination="opx-47-fju" kind="push" identifier="segueToAddRewards" id="V4b-1g-pCb"/>
                     </connections>
                 </viewController>
             </objects>
@@ -651,7 +681,7 @@
         <scene sceneID="8Ce-Kz-wvT">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UlO-Mw-AUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="opx-47-fju" sceneMemberID="viewController">
+                <viewController id="opx-47-fju" customClass="AddRewardsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eyj-6x-T8d">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -680,11 +710,18 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="opx-47-fju" eventType="touchUpInside" id="hvj-th-THx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add &quot;X&quot; Reward" id="BnL-Sc-EeF"/>
+                    <navigationItem key="navigationItem" title="Add &quot;X&quot; Rewards" id="BnL-Sc-EeF"/>
+                    <connections>
+                        <outlet property="rewardTitle" destination="IQb-at-TZz" id="qR2-gf-qgB"/>
+                        <outlet property="viewTitle" destination="BnL-Sc-EeF" id="OGw-Nk-mV4"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1697" y="932"/>
@@ -722,7 +759,7 @@
                             <outlet property="delegate" destination="aN1-3y-Kay" id="2hz-Iu-i7Z"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Delete &quot;X&quot; Reward" id="0hn-A1-fby"/>
+                    <navigationItem key="navigationItem" title="Delete &quot;X&quot; Rewards" id="0hn-A1-fby"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1697" y="1501"/>
@@ -730,7 +767,7 @@
         <scene sceneID="fvL-2L-adB">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FKP-nX-xdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="IPR-jr-fT3" sceneMemberID="viewController">
+                <viewController id="IPR-jr-fT3" customClass="AddGoalsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mPr-NZ-aTf">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -759,11 +796,18 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="IPR-jr-fT3" eventType="touchUpInside" id="GUt-iB-hAq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add &quot;X&quot; Goal" id="wxq-CX-4KP"/>
+                    <navigationItem key="navigationItem" title="Add &quot;X&quot; Goals" id="wxq-CX-4KP"/>
+                    <connections>
+                        <outlet property="goalTitle" destination="InO-Lm-34R" id="Qlt-rK-4Ue"/>
+                        <outlet property="viewTitle" destination="wxq-CX-4KP" id="mM5-hC-Wha"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1697" y="-831"/>
@@ -801,13 +845,27 @@
                             <outlet property="delegate" destination="hY3-GP-lrz" id="eBQ-ko-PGz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Complete &quot;X&quot; Goal" id="LUD-gC-U8W"/>
+                    <navigationItem key="navigationItem" title="Complete &quot;X&quot; Goals" id="LUD-gC-U8W"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1697" y="-1446"/>
         </scene>
     </scenes>
     <classes>
+        <class className="AddGoalsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddGoalsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="goalTitle" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="viewTitle" candidateClass="UINavigationItem"/>
+            </relationships>
+        </class>
+        <class className="AddRewardsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddRewardsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="rewardTitle" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="viewTitle" candidateClass="UINavigationItem"/>
+            </relationships>
+        </class>
         <class className="GamificationViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GamificationViewController.h"/>
         </class>

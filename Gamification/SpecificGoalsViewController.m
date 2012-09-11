@@ -7,6 +7,7 @@
 //
 
 #import "SpecificGoalsViewController.h"
+#import "AddGoalsViewController.h"
 
 @implementation SpecificGoalsViewController
 @synthesize everydayLabel;
@@ -23,6 +24,18 @@
 {
     self.dataSource = dataSource;
     self.instruction = instruction;
+}
+
+- (IBAction)buttonPressed:(id)sender {
+    NSString *titleHolder = [[@"segueTo" stringByAppendingString:self.instruction] stringByAppendingString:@"Goals"];
+    [self performSegueWithIdentifier:titleHolder sender:sender];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"segueToAddGoals"]) {
+        [(AddGoalsViewController *) segue.destinationViewController setup:self.dataSource withType:((UIButton *) sender).titleLabel.text];
+    }
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -51,11 +64,9 @@
 }
 */
 
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
+-(void)viewWillAppear:(BOOL)animated   
 {
-    [super viewDidLoad];
+    [super viewWillAppear:animated];
     NSDictionary *holder = [[NSDictionary alloc ] initWithDictionary:[self.dataSource goalCounts]];
     everydayLabel.text = [[holder objectForKey:@"Everyday"] stringValue];
     tinyLabel.text = [[holder objectForKey:@"Tiny"] stringValue];
@@ -63,7 +74,14 @@
     mediumLabel.text = [[holder objectForKey:@"Medium"] stringValue];
     largeLabel.text = [[holder objectForKey:@"Large"] stringValue];
     epicLabel.text = [[holder objectForKey:@"Epic"] stringValue];
-    viewTitle.title = [self.instruction stringByAppendingString:@" Goal"];
+    viewTitle.title = [self.instruction stringByAppendingString:@" Goals"];
+}
+
+
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
 }
 
 

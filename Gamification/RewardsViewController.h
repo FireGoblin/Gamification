@@ -10,6 +10,7 @@
 
 @protocol RewardsViewDataSource <NSObject>
 -(NSDictionary *)rewardCounts;
+-(void)addReward:(NSString *)reward toType:(NSString *)type;
 @end
 
 @interface RewardsViewController : UIViewController

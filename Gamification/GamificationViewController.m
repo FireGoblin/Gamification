@@ -63,6 +63,16 @@
     return retVal;
 }
 
+-(void)addReward:(NSString *)reward toType:(NSString *)type
+{
+    [[self.theRewards objectForKey:type] addReward:reward];
+}
+
+-(void)addGoal:(NSString *)goal toType:(NSString *)type
+{
+    [[self.theGoals objectForKey:type] addGoal:goal];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([segue.identifier isEqualToString:@"segueToCurrentStats"])

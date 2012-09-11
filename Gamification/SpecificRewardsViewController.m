@@ -7,6 +7,7 @@
 //
 
 #import "SpecificRewardsViewController.h"
+#import "AddRewardsViewController.h"
 
 @implementation SpecificRewardsViewController
 @synthesize commonLabel;
@@ -22,7 +23,17 @@
     self.dataSource = dataSource;
     self.instruction = instruction;
 }
+- (IBAction)buttonPressed:(id)sender {
+    NSString *titleHolder = [[@"segueTo" stringByAppendingString:self.instruction] stringByAppendingString:@"Rewards"];
+    [self performSegueWithIdentifier:titleHolder sender:sender];
+}
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"segueToAddRewards"]) {
+        [(AddRewardsViewController *) segue.destinationViewController setup:self.dataSource withType:((UIButton *) sender).titleLabel.text];
+    }
+}
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -49,17 +60,27 @@
 }
 */
 
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
+    [super viewWillAppear:animated];
     NSDictionary *holder = [[NSDictionary alloc ] initWithDictionary:[self.dataSource rewardCounts]];
     commonLabel.text = [[holder objectForKey:@"Common"] stringValue];
     uncommonLabel.text = [[holder objectForKey:@"Uncommon"] stringValue];
     rareLabel.text = [[holder objectForKey:@"Rare"] stringValue];
     legendaryLabel.text = [[holder objectForKey:@"Legendary"] stringValue];
-    viewTitle.title = [self.instruction stringByAppendingString:@" Reward"];
+    viewTitle.title = [self.instruction stringByAppendingString:@" Rewards"];
+}
+
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    /*NSDictionary *holder = [[NSDictionary alloc ] initWithDictionary:[self.dataSource rewardCounts]];
+    commonLabel.text = [[holder objectForKey:@"Common"] stringValue];
+    uncommonLabel.text = [[holder objectForKey:@"Uncommon"] stringValue];
+    rareLabel.text = [[holder objectForKey:@"Rare"] stringValue];
+    legendaryLabel.text = [[holder objectForKey:@"Legendary"] stringValue];
+    viewTitle.title = [self.instruction stringByAppendingString:@" Rewards"];*/
 }
 
 
