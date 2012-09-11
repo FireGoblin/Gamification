@@ -46,6 +46,10 @@
 		8FC14BC415FEADBB0039CA2C /* AddGoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BC215FEADBB0039CA2C /* AddGoalsViewController.m */; };
 		8FC14BC715FEADEA0039CA2C /* AddRewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BC615FEADEA0039CA2C /* AddRewardsViewController.m */; };
 		8FC14BC815FEADEA0039CA2C /* AddRewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BC615FEADEA0039CA2C /* AddRewardsViewController.m */; };
+		8FC14BCB15FECDC40039CA2C /* CompleteGoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BCA15FECDC40039CA2C /* CompleteGoalsViewController.m */; };
+		8FC14BCC15FECDC40039CA2C /* CompleteGoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BCA15FECDC40039CA2C /* CompleteGoalsViewController.m */; };
+		8FC14BCF15FECE250039CA2C /* DeleteGoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BCE15FECE240039CA2C /* DeleteGoalsViewController.m */; };
+		8FC14BD015FECE250039CA2C /* DeleteGoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BCE15FECE240039CA2C /* DeleteGoalsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +108,10 @@
 		8FC14BC215FEADBB0039CA2C /* AddGoalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGoalsViewController.m; sourceTree = "<group>"; };
 		8FC14BC515FEADEA0039CA2C /* AddRewardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRewardsViewController.h; sourceTree = "<group>"; };
 		8FC14BC615FEADEA0039CA2C /* AddRewardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRewardsViewController.m; sourceTree = "<group>"; };
+		8FC14BC915FECDC30039CA2C /* CompleteGoalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompleteGoalsViewController.h; sourceTree = "<group>"; };
+		8FC14BCA15FECDC40039CA2C /* CompleteGoalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleteGoalsViewController.m; sourceTree = "<group>"; };
+		8FC14BCD15FECE240039CA2C /* DeleteGoalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteGoalsViewController.h; sourceTree = "<group>"; };
+		8FC14BCE15FECE240039CA2C /* DeleteGoalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteGoalsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +202,10 @@
 				8FC14BC215FEADBB0039CA2C /* AddGoalsViewController.m */,
 				8FC14BC515FEADEA0039CA2C /* AddRewardsViewController.h */,
 				8FC14BC615FEADEA0039CA2C /* AddRewardsViewController.m */,
+				8FC14BC915FECDC30039CA2C /* CompleteGoalsViewController.h */,
+				8FC14BCA15FECDC40039CA2C /* CompleteGoalsViewController.m */,
+				8FC14BCD15FECE240039CA2C /* DeleteGoalsViewController.h */,
+				8FC14BCE15FECE240039CA2C /* DeleteGoalsViewController.m */,
 				8FC14B3F15E2EEF50039CA2C /* Supporting Files */,
 			);
 			path = Gamification;
@@ -351,6 +363,8 @@
 				8FC14BBF15FE8DCB0039CA2C /* SpecificRewardsViewController.m in Sources */,
 				8FC14BC315FEADBB0039CA2C /* AddGoalsViewController.m in Sources */,
 				8FC14BC715FEADEA0039CA2C /* AddRewardsViewController.m in Sources */,
+				8FC14BCB15FECDC40039CA2C /* CompleteGoalsViewController.m in Sources */,
+				8FC14BCF15FECE250039CA2C /* DeleteGoalsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +386,8 @@
 				8FC14BC015FE8DCB0039CA2C /* SpecificRewardsViewController.m in Sources */,
 				8FC14BC415FEADBB0039CA2C /* AddGoalsViewController.m in Sources */,
 				8FC14BC815FEADEA0039CA2C /* AddRewardsViewController.m in Sources */,
+				8FC14BCC15FECDC40039CA2C /* CompleteGoalsViewController.m in Sources */,
+				8FC14BD015FECE250039CA2C /* DeleteGoalsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

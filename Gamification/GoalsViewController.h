@@ -11,6 +11,8 @@
 @protocol GoalsViewDataSource <NSObject>
 -(NSDictionary *)goalCounts;
 -(void)addGoal:(NSString *)goal toType:(NSString *)type;
+-(int)goalCount:(NSString *)type;
+-(NSString *)getGoalTitleOfType:(NSString *)type atIndex:(NSUInteger)index;
 @end
 
 @interface GoalsViewController : UIViewController

@@ -8,6 +8,8 @@
 
 #import "SpecificGoalsViewController.h"
 #import "AddGoalsViewController.h"
+#import "CompleteGoalsViewController.h"
+#import "DeleteGoalsViewController.h"
 
 @implementation SpecificGoalsViewController
 @synthesize everydayLabel;
@@ -35,6 +37,12 @@
 {
     if ([[segue identifier] isEqualToString:@"segueToAddGoals"]) {
         [(AddGoalsViewController *) segue.destinationViewController setup:self.dataSource withType:((UIButton *) sender).titleLabel.text];
+    }
+    else if([[segue identifier] isEqualToString:@"segueToCompleteGoals"]) {
+        [(CompleteGoalsViewController *) segue.destinationViewController setup:self.dataSource withType:((UIButton *) sender).titleLabel.text];
+    }
+    else if([[segue identifier] isEqualToString:@"segueToDeleteGoals"]) {
+        [(DeleteGoalsViewController *)  segue.destinationViewController setup:self.dataSource withType: ((UIButton *) sender).titleLabel.text];
     }
 }
 

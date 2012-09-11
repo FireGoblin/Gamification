@@ -10,6 +10,7 @@
 #import "GoalSet.h"
 #import "RewardSet.h"
 #import "StatsViewController.h"
+#import "Goal.h"
 
 @implementation GamificationViewController
 
@@ -63,6 +64,16 @@
     return retVal;
 }
 
+-(int)goalCount:(NSString *)type
+{
+    return ((GoalSet *) [self.theGoals objectForKey:type]).size;
+}
+
+-(int)rewardCount:(NSString *)type
+{
+    return ((RewardSet *) [self.theRewards objectForKey:type]).size;
+}
+
 -(void)addReward:(NSString *)reward toType:(NSString *)type
 {
     [[self.theRewards objectForKey:type] addReward:reward];
@@ -71,6 +82,11 @@
 -(void)addGoal:(NSString *)goal toType:(NSString *)type
 {
     [[self.theGoals objectForKey:type] addGoal:goal];
+}
+
+-(NSString *)getGoalTitleOfType:(NSString *)type atIndex:(NSUInteger)index
+{
+    return ((Goal *) [((GoalSet *) [self.theGoals objectForKey:type]).goals objectAtIndex:index]).title;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

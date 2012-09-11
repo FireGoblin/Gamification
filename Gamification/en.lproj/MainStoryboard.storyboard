@@ -515,7 +515,7 @@
         <scene sceneID="7kC-6b-qU8">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQ5-Yb-jiR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="IiB-g0-Z1I" sceneMemberID="viewController">
+                <tableViewController id="IiB-g0-Z1I" customClass="DeleteGoalsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xqP-PN-1HH">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -546,6 +546,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Delete &quot;X&quot; Goals" id="5Ik-Vw-nSN"/>
+                    <connections>
+                        <outlet property="viewTitle" destination="5Ik-Vw-nSN" id="lkb-Ra-4h4"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1697" y="-219"/>
@@ -815,7 +818,7 @@
         <scene sceneID="ojn-Fg-ztV">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1W-Kq-q2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="hY3-GP-lrz" sceneMemberID="viewController">
+                <tableViewController id="hY3-GP-lrz" customClass="CompleteGoalsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="LXk-Cd-Saq">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -846,6 +849,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Complete &quot;X&quot; Goals" id="LUD-gC-U8W"/>
+                    <connections>
+                        <outlet property="viewTitle" destination="LUD-gC-U8W" id="uGU-K0-7iV"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1697" y="-1446"/>
@@ -863,6 +869,18 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddRewardsViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="rewardTitle" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="viewTitle" candidateClass="UINavigationItem"/>
+            </relationships>
+        </class>
+        <class className="CompleteGoalsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CompleteGoalsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="viewTitle" candidateClass="UINavigationItem"/>
+            </relationships>
+        </class>
+        <class className="DeleteGoalsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DeleteGoalsViewController.h"/>
+            <relationships>
                 <relationship kind="outlet" name="viewTitle" candidateClass="UINavigationItem"/>
             </relationships>
         </class>
