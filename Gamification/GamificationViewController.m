@@ -11,6 +11,7 @@
 #import "RewardSet.h"
 #import "StatsViewController.h"
 #import "Goal.h"
+#import "Reward.h"
 
 @implementation GamificationViewController
 
@@ -52,9 +53,19 @@
     return retVal;
 }
 
--(NSDictionary *)goalCounts
+-(NSDictionary *)availableRewardCounts
 {
     NSMutableDictionary *retVal = [[NSMutableDictionary alloc] initWithCapacity:4];
+    [retVal setObject:[[NSNumber alloc] initWithInt:((RewardSet *)[self.theRewards objectForKey:@"Common"]).useSize] forKey:@"Common"];
+    [retVal setObject:[[NSNumber alloc] initWithInt:((RewardSet *)[self.theRewards objectForKey:@"Uncommon"]).useSize] forKey:@"Uncommon"];
+    [retVal setObject:[[NSNumber alloc] initWithInt:((RewardSet *)[self.theRewards objectForKey:@"Rare"]).useSize] forKey:@"Rare"];
+    [retVal setObject:[[NSNumber alloc] initWithInt:((RewardSet *)[self.theRewards objectForKey:@"Legendary"]).useSize] forKey:@"Legendary"];
+    return retVal;
+}
+
+-(NSDictionary *)goalCounts
+{
+    NSMutableDictionary *retVal = [[NSMutableDictionary alloc] initWithCapacity:6];
     [retVal setObject:[[NSNumber alloc] initWithInt:((GoalSet *)[self.theGoals objectForKey:@"Everyday"]).size] forKey:@"Everyday"];
     [retVal setObject:[[NSNumber alloc] initWithInt:((GoalSet *)[self.theGoals objectForKey:@"Tiny"]).size] forKey:@"Tiny"];
     [retVal setObject:[[NSNumber alloc] initWithInt:((GoalSet *)[self.theGoals objectForKey:@"Small"]).size] forKey:@"Small"];
@@ -87,6 +98,21 @@
 -(NSString *)getGoalTitleOfType:(NSString *)type atIndex:(NSUInteger)index
 {
     return ((Goal *) [((GoalSet *) [self.theGoals objectForKey:type]).goals objectAtIndex:index]).title;
+}
+
+-(NSString *)getRewardTitleOfType:(NSString *)type atIndex:(NSUInteger)index
+{
+    return ((Reward *)[[[self.theRewards objectForKey:type] getRewards] objectAtIndex:index]).title;
+}
+
+-(void)deleteGoal:(NSString *)reward ofType:(NSString *)type
+{
+    [[self.theGoals objectForKey:type] deleteGoal:reward];
+}
+
+-(void)deleteReward:(NSString *)reward ofType:(NSString *)type
+{
+    [[self.theRewards objectForKey:type] deleteReward:reward];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

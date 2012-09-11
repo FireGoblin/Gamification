@@ -11,7 +11,7 @@
 
 @implementation RewardSet
 
-@synthesize rewards = _rewards, rewardType = _rewardType, size = _size;
+@synthesize rewards = _rewards, rewardType = _rewardType, size = _size, useSize = _useSize;
 
 - (void)setRewardType:(NSString *)rewardType
 {
@@ -27,6 +27,10 @@
 {
     _size = size;
 }
+- (void)setUseSize:(int)useSize
+{
+    _useSize = useSize;
+}
 
 - (id) initWithType:(NSString *)type
 {
@@ -36,6 +40,7 @@
         self.rewardType = type;
         self.rewards = [[NSMutableDictionary alloc] init];
         self.size = 0;
+        self.useSize = 0;
     }
     return self;
 }
@@ -44,6 +49,7 @@
 {
     unsigned int holder = [[[self rewards] valueForKey:theReward] unsignedIntValue];
     [[self rewards] setObject:[NSNumber numberWithUnsignedInt:holder-1] forKey:theReward];
+    self.useSize--;
 }
 
 - (NSString *) earnRandomReward
@@ -52,6 +58,7 @@
     NSString * theReward = [keys objectAtIndex:(arc4random() % [keys count])];
     unsigned int holder = [[[self rewards] valueForKey:theReward] unsignedIntValue];
     [[self rewards] setObject:[NSNumber numberWithUnsignedInt:holder+1] forKey:theReward];
+    self.useSize++;
     return theReward;
 }
 

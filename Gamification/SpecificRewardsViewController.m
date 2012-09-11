@@ -8,6 +8,7 @@
 
 #import "SpecificRewardsViewController.h"
 #import "AddRewardsViewController.h"
+#import "DeleteRewardsViewController.h"
 
 @implementation SpecificRewardsViewController
 @synthesize commonLabel;
@@ -32,6 +33,9 @@
 {
     if ([[segue identifier] isEqualToString:@"segueToAddRewards"]) {
         [(AddRewardsViewController *) segue.destinationViewController setup:self.dataSource withType:((UIButton *) sender).titleLabel.text];
+    }
+    else if([[segue identifier] isEqualToString:@"segueToDeleteRewards"]) {
+        [(DeleteRewardsViewController *)  segue.destinationViewController setup:self.dataSource withType: ((UIButton *) sender).titleLabel.text];
     }
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -63,7 +67,11 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    NSDictionary *holder = [[NSDictionary alloc ] initWithDictionary:[self.dataSource rewardCounts]];
+    NSDictionary * holder;
+    if([self.instruction isEqualToString:@"Use"])
+        holder = [[NSDictionary alloc] initWithDictionary:[self.dataSource availableRewardCounts]];
+    else
+        holder = [[NSDictionary alloc ] initWithDictionary:[self.dataSource rewardCounts]];
     commonLabel.text = [[holder objectForKey:@"Common"] stringValue];
     uncommonLabel.text = [[holder objectForKey:@"Uncommon"] stringValue];
     rareLabel.text = [[holder objectForKey:@"Rare"] stringValue];

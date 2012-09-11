@@ -1,20 +1,20 @@
 //
-//  DeleteGoalsViewController.m
+//  DeleteRewardsViewController.m
 //  Gamification
 //
 //  Created by Michael Overstreet on 9/10/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "DeleteGoalsViewController.h"
+#import "DeleteRewardsViewController.h"
 
 
-@implementation DeleteGoalsViewController
-@synthesize viewTitle = _viewTitle;
+@implementation DeleteRewardsViewController
+@synthesize viewTitle;
 
 @synthesize dataSource = _dataSource, type = _type;
 
--(void)setup:(id<GoalsViewDataSource>)dataSource withType:(NSString *)type
+-(void)setup:(id<RewardsViewDataSource>)dataSource withType:(NSString *)type
 {
     self.dataSource = dataSource;
     self.type = type;
@@ -61,7 +61,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.viewTitle.title = [[@"Delete " stringByAppendingString:self.type] stringByAppendingString:@" Goals"];
+    self.viewTitle.title = [[@"Delete " stringByAppendingString:self.type] stringByAppendingString:@" Rewards"];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -96,19 +96,19 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.dataSource goalCount:self.type];
+    return [self.dataSource rewardCount:self.type];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"DeleteGoalsCell";
+    static NSString *CellIdentifier = @"DeleteRewardsCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [self.dataSource getGoalTitleOfType:self.type atIndex:[indexPath indexAtPosition:1]];
+    cell.textLabel.text = [self.dataSource getRewardTitleOfType:self.type atIndex:[indexPath indexAtPosition:1]];
     
     return cell;
 }
@@ -116,7 +116,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 0) {
-        [self.dataSource deleteGoal:alertView.title ofType:self.type];
+        [self.dataSource deleteReward:alertView.title ofType:self.type];
         [self.tableView reloadData];
     }
 }
@@ -174,7 +174,7 @@
     UITableViewCell *pressed = [tableView cellForRowAtIndexPath:indexPath];
     UIAlertView *alert = [[UIAlertView alloc]
                           initWithTitle:pressed.textLabel.text 
-                          message:@"Are you sure you want to delete this goal?"
+                          message:@"Are you sure you want to delete this reward?"
                           delegate:self
                           cancelButtonTitle:@"OK"
                           otherButtonTitles:@"Cancel", nil];

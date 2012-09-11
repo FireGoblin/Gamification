@@ -35,7 +35,8 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"segueToAddGoals"]) {
+    [segue.destinationViewController setup:self.dataSource withType:((UIButton *) sender).titleLabel.text];
+    /*if ([[segue identifier] isEqualToString:@"segueToAddGoals"]) {
         [(AddGoalsViewController *) segue.destinationViewController setup:self.dataSource withType:((UIButton *) sender).titleLabel.text];
     }
     else if([[segue identifier] isEqualToString:@"segueToCompleteGoals"]) {
@@ -43,7 +44,7 @@
     }
     else if([[segue identifier] isEqualToString:@"segueToDeleteGoals"]) {
         [(DeleteGoalsViewController *)  segue.destinationViewController setup:self.dataSource withType: ((UIButton *) sender).titleLabel.text];
-    }
+    }*/
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
