@@ -26,6 +26,15 @@
 }
 
 - (IBAction)buttonPressed:(id)sender {
+    NSString *message = [[[goalTitle.text stringByAppendingString:@" was added to "] stringByAppendingString:self.type] stringByAppendingString:@" Goals"];
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Goal Added"
+                          message:message
+                          delegate:nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil];
+    [alert show];
+    
     [self.dataSource addGoal:goalTitle.text toType:self.type];
     self.goalTitle.text = @"";
 }

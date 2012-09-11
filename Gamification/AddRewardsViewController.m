@@ -26,6 +26,15 @@
 }
 
 - (IBAction)buttonPressed:(id)sender {
+    NSString *message = [[[rewardTitle.text stringByAppendingString:@" was added to "] stringByAppendingString:self.type] stringByAppendingString:@" Rewards"];
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Reward Added"
+                          message:message
+                          delegate:nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil];
+    [alert show];
+    
     [self.dataSource addReward:rewardTitle.text toType:self.type];
     rewardTitle.text = @"";
 }
