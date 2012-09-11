@@ -22,5 +22,6 @@
 - (void) deleteReward:(NSString *)theReward;
 - (id) initWithType:(NSString *)type;
 - (NSArray *)getRewards;
+- (NSDictionary *)availableRewards;
 
 @end

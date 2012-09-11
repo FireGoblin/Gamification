@@ -115,6 +115,26 @@
     [[self.theRewards objectForKey:type] deleteReward:reward];
 }
 
+-(NSDictionary *)availableRewards:(NSString *)type
+{
+    return [[self.theRewards objectForKey:type] availableRewards];
+}
+
+-(NSString *)completeGoal:(NSString *)type
+{
+    return [[self.theGoals objectForKey:type] performGoal];
+}
+
+-(NSString *)rollForReward:(NSString *)type
+{
+    return [[self.theRewards objectForKey:type] earnRandomReward];
+}
+
+-(void)useReward:(NSString *)reward ofType:(NSString *)type
+{
+    [[self.theRewards objectForKey:type] useReward:reward];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([segue.identifier isEqualToString:@"segueToCurrentStats"])

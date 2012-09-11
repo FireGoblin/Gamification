@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GoalsViewController.h"
 
-@interface CompleteGoalsViewController : UITableViewController
+@interface CompleteGoalsViewController : UITableViewController <UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UINavigationItem *viewTitle;
 
 @property (nonatomic, strong) id<GoalsViewDataSource> dataSource;

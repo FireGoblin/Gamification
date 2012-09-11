@@ -52,6 +52,8 @@
 		8FC14BD015FECE250039CA2C /* DeleteGoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BCE15FECE240039CA2C /* DeleteGoalsViewController.m */; };
 		8FC14BD315FEE1DF0039CA2C /* DeleteRewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BD215FEE1DE0039CA2C /* DeleteRewardsViewController.m */; };
 		8FC14BD415FEE1DF0039CA2C /* DeleteRewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BD215FEE1DE0039CA2C /* DeleteRewardsViewController.m */; };
+		8FC14BD715FEF5AE0039CA2C /* UseRewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BD615FEF5AD0039CA2C /* UseRewardsViewController.m */; };
+		8FC14BD815FEF5AE0039CA2C /* UseRewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BD615FEF5AD0039CA2C /* UseRewardsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +118,8 @@
 		8FC14BCE15FECE240039CA2C /* DeleteGoalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteGoalsViewController.m; sourceTree = "<group>"; };
 		8FC14BD115FEE1DE0039CA2C /* DeleteRewardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteRewardsViewController.h; sourceTree = "<group>"; };
 		8FC14BD215FEE1DE0039CA2C /* DeleteRewardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteRewardsViewController.m; sourceTree = "<group>"; };
+		8FC14BD515FEF5AD0039CA2C /* UseRewardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseRewardsViewController.h; sourceTree = "<group>"; };
+		8FC14BD615FEF5AD0039CA2C /* UseRewardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseRewardsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +214,8 @@
 				8FC14BCE15FECE240039CA2C /* DeleteGoalsViewController.m */,
 				8FC14BC515FEADEA0039CA2C /* AddRewardsViewController.h */,
 				8FC14BC615FEADEA0039CA2C /* AddRewardsViewController.m */,
+				8FC14BD515FEF5AD0039CA2C /* UseRewardsViewController.h */,
+				8FC14BD615FEF5AD0039CA2C /* UseRewardsViewController.m */,
 				8FC14BD115FEE1DE0039CA2C /* DeleteRewardsViewController.h */,
 				8FC14BD215FEE1DE0039CA2C /* DeleteRewardsViewController.m */,
 				8FC14B3F15E2EEF50039CA2C /* Supporting Files */,
@@ -372,6 +378,7 @@
 				8FC14BCB15FECDC40039CA2C /* CompleteGoalsViewController.m in Sources */,
 				8FC14BCF15FECE250039CA2C /* DeleteGoalsViewController.m in Sources */,
 				8FC14BD315FEE1DF0039CA2C /* DeleteRewardsViewController.m in Sources */,
+				8FC14BD715FEF5AE0039CA2C /* UseRewardsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +403,7 @@
 				8FC14BCC15FECDC40039CA2C /* CompleteGoalsViewController.m in Sources */,
 				8FC14BD015FECE250039CA2C /* DeleteGoalsViewController.m in Sources */,
 				8FC14BD415FEE1DF0039CA2C /* DeleteRewardsViewController.m in Sources */,
+				8FC14BD815FEF5AE0039CA2C /* UseRewardsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

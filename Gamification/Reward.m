@@ -25,7 +25,7 @@
 {
     if([anObject class] != [Reward class])
         return FALSE;
-    else if(((Reward *) anObject).title == self.title)
+    else if([((Reward *) anObject).title isEqualToString: self.title])
         return TRUE;
     else
         return FALSE;

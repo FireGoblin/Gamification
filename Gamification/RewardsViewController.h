@@ -15,6 +15,8 @@
 -(NSDictionary *)availableRewardCounts;
 -(NSString *)getRewardTitleOfType:(NSString *)type atIndex:(NSUInteger)index;
 -(void)deleteReward:(NSString *)reward ofType:(NSString *)type;
+-(NSDictionary *) availableRewards:(NSString *)type;
+-(void)useReward:(NSString *)reward ofType:(NSString *)type;
 @end
 
 @interface RewardsViewController : UIViewController

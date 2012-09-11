@@ -162,7 +162,7 @@
         <scene sceneID="v4j-6K-FJf">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zkn-rZ-aZj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="fUD-Av-Srn" sceneMemberID="viewController">
+                <tableViewController id="fUD-Av-Srn" customClass="UseRewardsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4AU-Za-WEv">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,6 +200,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Use &quot;X&quot; Rewards" id="9HQ-Xu-Tk8"/>
+                    <connections>
+                        <outlet property="viewTitle" destination="9HQ-Xu-Tk8" id="6Vp-dQ-sOt"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1697" y="378"/>
@@ -934,6 +937,12 @@
                 <relationship kind="outlet" name="progress" candidateClass="UIProgressView"/>
                 <relationship kind="outlet" name="stacks" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="timeLeft" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="UseRewardsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UseRewardsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="viewTitle" candidateClass="UINavigationItem"/>
             </relationships>
         </class>
     </classes>

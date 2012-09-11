@@ -10,16 +10,27 @@
 #import "Constants.h"
 #import "Goal.h"
 
-@implementation GoalSet
+@interface GoalSet()
 
+@property (nonatomic) goalsize chanceIndex;
+@property (nonatomic) int expGain;
+@property (nonatomic) double legendaryChance;
+@property (nonatomic) double rareChance;
+@property (nonatomic) double uncommonChance;
+@property (nonatomic) double commonChance;
+@end
+
+@implementation GoalSet
+/*
 goalsize chanceIndex;
 int expGain;
-int legendaryChance;
-int rareChance;
-int uncommonChance;
-int commonChance;
-
+float legendaryChance;
+float rareChance;
+float uncommonChance;
+float commonChance;
+*/
 @synthesize goalType = _goalType, goals = _goals, theUser = _theUser, size = _size;
+@synthesize expGain = _expGain, legendaryChance = _legendaryChance, rareChance = _rareChance, uncommonChance = _uncommonChance, commonChance = _commonChance, chanceIndex = _chanceIndex;
 
 
 //private setters -----------------
@@ -55,25 +66,25 @@ int commonChance;
         self.size = 0;
     
         if(type == @"Everyday")
-            chanceIndex = Everyday;
+            self.chanceIndex = Everyday;
         else if(type == @"Tiny")
-            chanceIndex = Tiny;
+            self.chanceIndex = Tiny;
         else if(type == @"Small")
-            chanceIndex = Small;
+            self.chanceIndex = Small;
         else if(type == @"Medium")
-            chanceIndex = Medium;
+            self.chanceIndex = Medium;
         else if(type == @"Large")
-            chanceIndex = Large;
+            self.chanceIndex = Large;
         else if(type == @"Epic")
-            chanceIndex = Epic;
+            self.chanceIndex = Epic;
         else
             ;//TODO: handle error
         
-        expGain = kExpGain[chanceIndex];
-        commonChance = kCommonChance[chanceIndex];
-        uncommonChance = kUncommonChance[chanceIndex];
-        rareChance = kRareChance[chanceIndex];
-        legendaryChance = kEpicChance[chanceIndex];
+        self.expGain = kExpGain[self.chanceIndex];
+        self.commonChance = kCommonChance[self.chanceIndex];
+        self.uncommonChance = kUncommonChance[self.chanceIndex];
+        self.rareChance = kRareChance[self.chanceIndex];
+        self.legendaryChance = kEpicChance[self.chanceIndex];
     }
     return self;
 }
@@ -101,26 +112,30 @@ int commonChance;
 //private
 - (void)gainExp
 {
-    [self.theUser incrementExp:expGain];
+    [self.theUser incrementExp:self.expGain];
 }
 
 //private
-- (int)rollForReward
+- (NSString *)rollForReward
 {
-    long long ARC4RANDOM_MAX = 0x100000000;     
-    double epicRoll = floorf((double)arc4random() / ARC4RANDOM_MAX);
-    if(epicRoll <= legendaryChance * (1 + [self.theUser.level intValue] * kLevelValue + [[[self theUser] stack] intValue] * kStackValue)) return Legendary;
-    double rareRoll = floorf((double)arc4random() / ARC4RANDOM_MAX);
-    if(rareRoll <= rareChance * (1 + [self.theUser.level intValue] * kLevelValue + [[[self theUser] stack] intValue] * kStackValue)) return Rare;
-    double uncommonRoll = floorf((double)arc4random() /ARC4RANDOM_MAX);
-    if(uncommonRoll <= uncommonChance * (1 + [self.theUser.level intValue] * kLevelValue + [[[self theUser] stack] intValue] * kStackValue)) return Uncommon;
-    double commonRoll = floorf((double)arc4random() / ARC4RANDOM_MAX);
-    if(commonRoll <= commonChance * (1 + [self.theUser.level intValue] * kLevelValue + [[[self theUser] stack] intValue] * kStackValue)) return Common;
+    long long ARC4RANDOM_MAX = 0x100000000;  
+    long long holder = arc4random();
+    double epicRoll = (double)holder / ARC4RANDOM_MAX;
+    if(epicRoll <= self.legendaryChance * (1 + [self.theUser.level intValue] * kLevelValue + [[[self theUser] stack] intValue] * kStackValue)) return @"Legendary";
+    holder = arc4random();
+    double rareRoll = (double)holder / ARC4RANDOM_MAX;
+    if(rareRoll <= self.rareChance * (1 + [self.theUser.level intValue] * kLevelValue + [[[self theUser] stack] intValue] * kStackValue)) return @"Rare";
+    holder = arc4random();
+    double uncommonRoll = (double)holder /ARC4RANDOM_MAX;
+    if(uncommonRoll <= self.uncommonChance * (1 + [self.theUser.level intValue] * kLevelValue + [[[self theUser] stack] intValue] * kStackValue)) return @"Uncommon";
+    holder = arc4random();
+    double commonRoll = (double)holder / ARC4RANDOM_MAX;
+    if(commonRoll <= self.commonChance * (1 + [self.theUser.level intValue] * kLevelValue + [[[self theUser] stack] intValue] * kStackValue)) return @"Common";
     
-    return -1;
+    return @"";
 }
 
-- (int)performGoal
+- (NSString *)performGoal
 {
     [self gainExp];
     return [self rollForReward];

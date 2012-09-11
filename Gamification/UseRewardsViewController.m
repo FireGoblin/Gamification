@@ -1,24 +1,25 @@
 //
-//  CompleteGoalsViewController.m
+//  UseRewardsViewController.m
 //  Gamification
 //
-//  Created by Michael Overstreet on 9/10/12.
+//  Created by Michael Overstreet on 9/11/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "CompleteGoalsViewController.h"
+#import "UseRewardsViewController.h"
+#import "Reward.h"
 
 
-@implementation CompleteGoalsViewController
+@implementation UseRewardsViewController
+@synthesize viewTitle;
 
-@synthesize viewTitle = _viewTitle;
-@synthesize dataSource = _dataSource;
-@synthesize type = _type;
+@synthesize dataSource = _dataSource, type = _type, availableRewards = _availableRewards;
 
--(void)setup:(id<GoalsViewDataSource>)dataSource withType:(NSString *)type
+-(void)setup:(id<RewardsViewDataSource>)dataSource withType:(NSString *)type
 {
     self.dataSource = dataSource;
     self.type = type;
+    self.availableRewards = [[NSDictionary alloc] initWithDictionary:[self.dataSource availableRewards:self.type]];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -62,7 +63,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.viewTitle.title = [[@"Complete " stringByAppendingString:self.type] stringByAppendingString:@" Goals"];
+    self.viewTitle.title = [[@"Use " stringByAppendingString:self.type] stringByAppendingString:@" Rewards"];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -97,58 +98,35 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.dataSource goalCount:self.type];
+    return [self.availableRewards count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"CompleteGoalsCell";
+    static NSString *CellIdentifier = @"UseRewardsCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    // Configure the cell...
-    
-    cell.textLabel.text = [self.dataSource getGoalTitleOfType:self.type atIndex:[indexPath indexAtPosition:1]];
+    int count = [self.availableRewards count];
+    id __unsafe_unretained objects[count];
+    id __unsafe_unretained keys[count];
+    [self.availableRewards getObjects:objects andKeys:keys];
+    cell.textLabel.text = ((Reward *) keys[[indexPath indexAtPosition:1]]).title;
+    cell.detailTextLabel.text = [objects[[indexPath indexAtPosition:1]] stringValue];
     
     return cell;
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (buttonIndex == 0 && [alertView.message isEqualToString:@"Did you really complete this goal?"]) {
-        NSString * rewardType = [[NSString alloc] initWithString:[self.dataSource completeGoal:self.type]];
-        if (![rewardType isEqualToString:@""]) {
-            NSString * message = [[NSString alloc] initWithString:[[@"You won a " stringByAppendingString:rewardType] stringByAppendingString:@" reward! Click OK to find out which reward."]];
-            UIAlertView *alertType = [[UIAlertView alloc]
-                                      initWithTitle:@"Congratulations"
-                                      message:message
-                                      delegate:self
-                                      cancelButtonTitle:rewardType
-                                      otherButtonTitles:nil];
-            [alertType show];
-        }
-        else {
-            UIAlertView *alert = [[UIAlertView alloc] 
-                                  initWithTitle:@"Sorry" 
-                                  message:@"No reward this time."
-                                  delegate:nil
-                                  cancelButtonTitle:@"OK"
-                                  otherButtonTitles:nil];
-            [alert show];
-        }
-    }
-    else if ([alertView.title isEqualToString:@"Congratulations"]){
-        NSString * reward = [[NSString alloc] initWithString: [self.dataSource rollForReward:[alertView buttonTitleAtIndex:0]]];
-        UIAlertView *alert = [[UIAlertView alloc]
-                              initWithTitle:@"Your reward is: "
-                              message:reward
-                              delegate:nil
-                              cancelButtonTitle:@"OK"
-                              otherButtonTitles:nil];
-        [alert show];
+    if (buttonIndex == 0) {
+        [self.dataSource useReward:alertView.title ofType:self.type];
+        //self.availableRewards = [[NSDictionary alloc] initWithDictionary:[self.dataSource availableRewards:self.type]]; 
+        self.availableRewards = [NSDictionary dictionaryWithDictionary:[self.dataSource availableRewards:self.type]];
+        [self.tableView reloadData];
     }
 }
 
@@ -206,11 +184,10 @@
     UITableViewCell *pressed = [tableView cellForRowAtIndexPath:indexPath];
     UIAlertView *alert = [[UIAlertView alloc]
                           initWithTitle:pressed.textLabel.text 
-                          message:@"Did you really complete this goal?"
+                          message:@"Are you sure you want to use this reward?"
                           delegate:self
                           cancelButtonTitle:@"OK"
                           otherButtonTitles:@"Cancel", nil];
-    [alert show];
-}
+    [alert show];}
 
 @end

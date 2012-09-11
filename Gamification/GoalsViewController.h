@@ -14,6 +14,8 @@
 -(int)goalCount:(NSString *)type;
 -(NSString *)getGoalTitleOfType:(NSString *)type atIndex:(NSUInteger)index;
 -(void)deleteGoal:(NSString *)reward ofType:(NSString *)type;
+-(NSString *)completeGoal:(NSString *)type;
+-(NSString *)rollForReward:(NSString *)type;
 @end
 
 @interface GoalsViewController : UIViewController

@@ -18,7 +18,7 @@
 
 - (void) addGoal:(NSString *)theGoal;
 - (void) deleteGoal:(NSString *)theGoal;
-- (int) performGoal;
+- (NSString *) performGoal;
 - (id) initWithType:(NSString *) type User:(UserStatus *) user;
 
 @end

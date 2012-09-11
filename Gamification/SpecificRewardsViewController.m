@@ -31,12 +31,13 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"segueToAddRewards"]) {
+    [segue.destinationViewController setup:self.dataSource withType: ((UIButton *) sender).titleLabel.text];
+    /*if ([[segue identifier] isEqualToString:@"segueToAddRewards"]) {
         [(AddRewardsViewController *) segue.destinationViewController setup:self.dataSource withType:((UIButton *) sender).titleLabel.text];
     }
     else if([[segue identifier] isEqualToString:@"segueToDeleteRewards"]) {
         [(DeleteRewardsViewController *)  segue.destinationViewController setup:self.dataSource withType: ((UIButton *) sender).titleLabel.text];
-    }
+    }*/
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
