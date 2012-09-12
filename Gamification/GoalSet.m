@@ -21,15 +21,8 @@
 @end
 
 @implementation GoalSet
-/*
-goalsize chanceIndex;
-int expGain;
-float legendaryChance;
-float rareChance;
-float uncommonChance;
-float commonChance;
-*/
-@synthesize goalType = _goalType, goals = _goals, theUser = _theUser, size = _size;
+
+@synthesize goalType = _goalType, goals = _goals, theUser = _theUser, size = _size, keys = _keys;
 @synthesize expGain = _expGain, legendaryChance = _legendaryChance, rareChance = _rareChance, uncommonChance = _uncommonChance, commonChance = _commonChance, chanceIndex = _chanceIndex;
 
 
@@ -53,6 +46,11 @@ float commonChance;
 {
     _size = size;
 }
+
+- (void)setKeys:(NSMutableSet *)keys
+{
+    _keys = keys;
+}
 //----------------------------
 
 //must be called for proper initialization
@@ -64,6 +62,7 @@ float commonChance;
         self.theUser = user;
         self.goals = [[NSMutableArray alloc] init ];
         self.size = 0;
+        self.keys = [[NSMutableSet alloc] init ];
     
         if(type == @"Everyday")
             self.chanceIndex = Everyday;
@@ -99,13 +98,15 @@ float commonChance;
 
 - (void)addGoal:(NSString *)theGoal
 {
-    [self.goals addObject:[[Goal alloc] initWithTitle:theGoal]];
+    [self.goals addObject:theGoal];
+    [self.keys addObject:[[Goal alloc] initWithTitle:theGoal]];
     self.size++;
 }
 
 - (void)deleteGoal:(NSString *)theGoal
 {
-    [self.goals removeObject:[[Goal alloc] initWithTitle:theGoal]];
+    [self.goals removeObject:theGoal];
+    [self.keys addObject:[[Goal alloc] initWithTitle:theGoal]];
     self.size--;
 }
 

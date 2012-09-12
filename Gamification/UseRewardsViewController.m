@@ -114,7 +114,7 @@
     id __unsafe_unretained objects[count];
     id __unsafe_unretained keys[count];
     [self.availableRewards getObjects:objects andKeys:keys];
-    cell.textLabel.text = ((Reward *) keys[[indexPath indexAtPosition:1]]).title;
+    cell.textLabel.text = keys[[indexPath indexAtPosition:1]];
     cell.detailTextLabel.text = [objects[[indexPath indexAtPosition:1]] stringValue];
     
     return cell;

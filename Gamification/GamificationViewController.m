@@ -97,12 +97,12 @@
 
 -(NSString *)getGoalTitleOfType:(NSString *)type atIndex:(NSUInteger)index
 {
-    return ((Goal *) [((GoalSet *) [self.theGoals objectForKey:type]).goals objectAtIndex:index]).title;
+    return [((GoalSet *) [self.theGoals objectForKey:type]).goals objectAtIndex:index];
 }
 
 -(NSString *)getRewardTitleOfType:(NSString *)type atIndex:(NSUInteger)index
 {
-    return ((Reward *)[[[self.theRewards objectForKey:type] getRewards] objectAtIndex:index]).title;
+    return [[[self.theRewards objectForKey:type] getRewards] objectAtIndex:index];
 }
 
 -(void)deleteGoal:(NSString *)reward ofType:(NSString *)type

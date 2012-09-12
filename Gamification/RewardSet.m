@@ -11,7 +11,7 @@
 
 @implementation RewardSet
 
-@synthesize rewards = _rewards, rewardType = _rewardType, size = _size, useSize = _useSize;
+@synthesize rewards = _rewards, rewardType = _rewardType, size = _size, useSize = _useSize, keys = _keys;
 
 - (void)setRewardType:(NSString *)rewardType
 {
@@ -27,9 +27,15 @@
 {
     _size = size;
 }
+
 - (void)setUseSize:(int)useSize
 {
     _useSize = useSize;
+}
+
+- (void)setKeys:(NSMutableSet *)keys
+{
+    _keys = keys;
 }
 
 - (id) initWithType:(NSString *)type
@@ -41,39 +47,41 @@
         self.rewards = [[NSMutableDictionary alloc] init];
         self.size = 0;
         self.useSize = 0;
+        self.keys = [[NSMutableSet alloc] init];
     }
     return self;
 }
 
 - (void) useReward:(NSString *)theReward
 {
-    Reward *reward = [[Reward alloc] initWithTitle:theReward];
-    unsigned int holder = [[self.rewards objectForKey:reward] unsignedIntValue];
-    [self.rewards removeObjectForKey:reward];
-    [self.rewards setObject:[[NSNumber alloc] initWithUnsignedInt:holder-1] forKey:reward];
+    unsigned int holder = [[self.rewards valueForKey:theReward] unsignedIntValue];
+    [self.rewards removeObjectForKey:theReward];
+    [self.rewards setValue:[[NSNumber alloc] initWithUnsignedInt:holder-1] forKey:theReward];
     self.useSize--;
 }
 
 - (NSString *) earnRandomReward
 {
-    NSArray * keys = [[self rewards] allKeys];
-    Reward * theReward = [keys objectAtIndex:(arc4random() % [keys count])];
-    unsigned int holder = [[[self rewards] objectForKey:theReward] unsignedIntValue];
+    NSArray * keys = [self.rewards allKeys];
+    NSString * theReward = [keys objectAtIndex:(arc4random() % [keys count])];
+    unsigned int holder = [[self.rewards valueForKey:theReward] unsignedIntValue];
     [self.rewards removeObjectForKey:theReward];
-    [self.rewards setObject:[[NSNumber alloc] initWithUnsignedInt:holder+1] forKey:theReward];
+    [self.rewards setValue:[[NSNumber alloc] initWithUnsignedInt:holder+1] forKey:theReward];
     self.useSize++;
-    return theReward.title;
+    return theReward;
 }
 
 - (void) addReward:(NSString *)theReward
 {
-    [self.rewards setObject:[[NSNumber alloc] initWithUnsignedInt:0] forKey:[[Reward alloc] initWithTitle:theReward]];
+    [self.rewards setValue:[[NSNumber alloc] initWithInt:0] forKey:theReward];
+    [self.keys addObject:[[Reward alloc] initWithTitle:theReward]];
     self.size++;
 }
 
 - (void) deleteReward:(NSString *)theReward
 {
-    [self.rewards removeObjectForKey:[[Reward alloc] initWithTitle:theReward]];
+    [self.rewards removeObjectForKey:theReward];
+    [self.keys removeObject:[[Reward alloc] initWithTitle:theReward]];
     self.size--;
 }
 
@@ -86,7 +94,7 @@
 {
     NSMutableDictionary *retval = [[NSMutableDictionary alloc] initWithDictionary:self.rewards];
     NSEnumerator *enumerator = [[retval allKeys] objectEnumerator];
-    Reward * key;
+    NSString * key;
     
     while(key = [enumerator nextObject]){
         if([[retval objectForKey:key] intValue] == 0) [retval removeObjectForKey:key];

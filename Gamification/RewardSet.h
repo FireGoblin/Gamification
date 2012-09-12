@@ -14,6 +14,7 @@
 @property (nonatomic, strong, readonly) NSMutableDictionary *rewards;
 @property (nonatomic, readonly) int size;
 @property (nonatomic, readonly) int useSize;
+@property (nonatomic, strong, readonly) NSMutableSet *keys;
 
 - (void) useReward:(NSString *)theReward;
 - (NSString *) earnRandomReward;
@@ -23,7 +24,5 @@
 - (id) initWithType:(NSString *)type;
 - (NSArray *)getRewards;
 - (NSDictionary *)availableRewards;
-
-- (NSString *)toString;
 
 @end
