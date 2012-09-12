@@ -124,8 +124,8 @@
 {
     if (buttonIndex == 0) {
         [self.dataSource useReward:alertView.title ofType:self.type];
-        //self.availableRewards = [[NSDictionary alloc] initWithDictionary:[self.dataSource availableRewards:self.type]]; 
-        self.availableRewards = [NSDictionary dictionaryWithDictionary:[self.dataSource availableRewards:self.type]];
+        self.availableRewards = [[NSDictionary alloc] initWithDictionary:[self.dataSource availableRewards:self.type]]; 
+        //self.availableRewards = [NSDictionary dictionaryWithDictionary:[self.dataSource availableRewards:self.type]];
         [self.tableView reloadData];
     }
 }

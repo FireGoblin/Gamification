@@ -50,7 +50,7 @@
     Reward *reward = [[Reward alloc] initWithTitle:theReward];
     unsigned int holder = [[self.rewards objectForKey:reward] unsignedIntValue];
     [self.rewards removeObjectForKey:reward];
-    [self.rewards setObject:[[NSNumber alloc] initWithUnsignedInt:holder-1] forKey:theReward];
+    [self.rewards setObject:[[NSNumber alloc] initWithUnsignedInt:holder-1] forKey:reward];
     self.useSize--;
 }
 

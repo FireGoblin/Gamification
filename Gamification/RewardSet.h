@@ -24,4 +24,6 @@
 - (NSArray *)getRewards;
 - (NSDictionary *)availableRewards;
 
+- (NSString *)toString;
+
 @end

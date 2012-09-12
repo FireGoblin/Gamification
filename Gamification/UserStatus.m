@@ -95,6 +95,8 @@ int maxLevel;
         if ([self.experience intValue] >= expToLevelMap[nextLevel]) currentLevel = nextLevel;
     }
     self.level = [NSNumber numberWithInt:currentLevel];
+
+    if(x >= 30) [self incrementStack];  //TODO: Formalize the if statement
 }
      
 - (void) incrementStack
