@@ -38,6 +38,31 @@
     _keys = keys;
 }
 
+- (void) writeToFile
+{
+    NSURL *path = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    path = [path URLByAppendingPathComponent:[@"RewardSet" stringByAppendingString:self.rewardType]];
+    NSArray *temp = [[NSArray alloc] initWithObjects:self.rewards, [[NSNumber alloc] initWithInt:self.size], [[NSNumber alloc] initWithInt:self.useSize], nil];
+    //write temp to file
+    //TODO: write keys
+    [temp writeToURL:path atomically:YES];
+}
+
+- (void) readFromFile
+{
+    NSArray *temp = [[NSArray alloc] init];
+    NSURL *path = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    path = [path URLByAppendingPathComponent:[@"RewardSet" stringByAppendingString:self.rewardType]];
+    temp = [NSArray arrayWithContentsOfURL:path];
+    if([temp count] == 3)
+    {
+        self.rewards = [temp objectAtIndex:0];
+        self.size = [[temp objectAtIndex:1] intValue];
+        self.useSize = [[temp objectAtIndex:2] intValue];
+    //TODO: read keys
+    }
+}
+
 - (id) initWithType:(NSString *)type
 {
     self = [super init];
@@ -48,6 +73,7 @@
         self.size = 0;
         self.useSize = 0;
         self.keys = [[NSMutableSet alloc] init];
+        [self readFromFile];
     }
     return self;
 }
@@ -58,16 +84,19 @@
     [self.rewards removeObjectForKey:theReward];
     [self.rewards setValue:[[NSNumber alloc] initWithUnsignedInt:holder-1] forKey:theReward];
     self.useSize--;
+    [self writeToFile];
 }
 
 - (NSString *) earnRandomReward
 {
     NSArray * keys = [self.rewards allKeys];
+    if([keys count] == 0) return @"";  //TODO: handle no reward case better
     NSString * theReward = [keys objectAtIndex:(arc4random() % [keys count])];
     unsigned int holder = [[self.rewards valueForKey:theReward] unsignedIntValue];
     [self.rewards removeObjectForKey:theReward];
     [self.rewards setValue:[[NSNumber alloc] initWithUnsignedInt:holder+1] forKey:theReward];
     self.useSize++;
+    [self writeToFile];
     return theReward;
 }
 
@@ -76,13 +105,16 @@
     [self.rewards setValue:[[NSNumber alloc] initWithInt:0] forKey:theReward];
     [self.keys addObject:[[Reward alloc] initWithTitle:theReward]];
     self.size++;
+    [self writeToFile];
 }
 
 - (void) deleteReward:(NSString *)theReward
 {
+    self.useSize -= [[self.rewards valueForKey:theReward] intValue];
     [self.rewards removeObjectForKey:theReward];
     [self.keys removeObject:[[Reward alloc] initWithTitle:theReward]];
     self.size--;
+    [self writeToFile];
 }
 
 - (NSArray *) getRewards

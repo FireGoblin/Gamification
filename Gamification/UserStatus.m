@@ -18,49 +18,6 @@ int maxLevel;
 
 @synthesize experience = _experience, level = _level, stack = _stack, stackExpiration = _stackExpiration;
 
-- (id)init
-{
-    self = [super init];
-    if(self)
-    {
-        maxCount = kMaxCount;
-        expirationTime = kExpirationTime;
-        memcpy(expToLevelMap, kExpToLevelMap, 51 * sizeof(int));
-        maxLevel = kMaxLevel;
-    }
-    return self;
-}
-
-- (NSNumber *)experience
-{
-    if (!_experience) _experience = [[NSNumber alloc] initWithInt:0];
-    return _experience;
-}
-
-- (NSNumber *)level
-{
-    if(!_level) _level = [[NSNumber alloc] initWithInt:0];
-    return _level;
-}
-
-- (NSNumber *)stack
-{
-    if(!_stack) _stack = [[NSNumber alloc] initWithInt:0];
-    return _stack;
-}
-
-- (NSDate *)stackExpiration
-{
-    //initialization is arbitrary
-    if(!_stackExpiration)
-    {
-        _stackExpiration = [[NSDate alloc] init];
-        _stackExpiration = [NSDate date];
-    }
-    return _stackExpiration;
-}
-
-
 //private setter functions---------------------
 - (void) setExperience:(NSNumber *)experience
 {
@@ -84,6 +41,74 @@ int maxLevel;
 
 //-----------------------------------
 
+- (void) readFromFile
+{
+    NSArray *temp = [[NSArray alloc] init];
+    NSURL *path = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    path = [path URLByAppendingPathComponent:@"UserStatus"];
+    temp = [NSArray arrayWithContentsOfURL:path];
+    //set temp to file contents
+    if([temp count] == 4)
+    {
+        self.experience = [temp objectAtIndex:0];
+        self.level = [temp objectAtIndex:1];
+        self.stack = [temp objectAtIndex:2];
+        self.stackExpiration = [temp objectAtIndex:3];
+    }
+}
+
+- (void) writeToFile
+{
+    NSURL *path = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    path = [path URLByAppendingPathComponent:@"UserStatus"];
+    NSArray *temp = [[NSArray alloc] initWithObjects:self.experience, self.level, self.stack, self.stackExpiration, nil];
+    [temp writeToURL:path atomically:YES];
+}
+
+- (id)init
+{
+    self = [super init];
+    if(self)
+    {
+        maxCount = kMaxCount;
+        expirationTime = kExpirationTime;
+        memcpy(expToLevelMap, kExpToLevelMap, 51 * sizeof(int));
+        maxLevel = kMaxLevel;
+        [self readFromFile];
+    }
+    return self;
+}
+
+- (NSNumber *)experience
+{
+    if (!_experience) _experience = [[NSNumber alloc] initWithInt:0];
+    return _experience;
+}
+
+- (NSNumber *)level
+{
+    if(!_level) _level = [[NSNumber alloc] initWithInt:0];
+    return _level;
+}
+
+- (NSNumber *)stack
+{
+    if(!_stack) _stack = [[NSNumber alloc] initWithInt:0];
+    else [self checkTime];
+    return _stack;
+}
+
+- (NSDate *)stackExpiration
+{
+    //initialization is arbitrary
+    if(!_stackExpiration)
+    {
+        _stackExpiration = [[NSDate alloc] init];
+        _stackExpiration = [NSDate date];
+    }
+    return _stackExpiration;
+}
+
 - (void) incrementExp:(int)x
 {
     [self setExperience:[NSNumber numberWithUnsignedInt:MIN(expToLevelMap[maxLevel], [[self experience] unsignedIntValue] + x)]];
@@ -97,6 +122,7 @@ int maxLevel;
     self.level = [NSNumber numberWithInt:currentLevel];
 
     if(x >= 30) [self incrementStack];  //TODO: Formalize the if statement
+    [self writeToFile];
 }
      
 - (void) incrementStack

@@ -53,6 +53,27 @@
 }
 //----------------------------
 
+- (void) readFromFile
+{
+    NSArray *temp = [[NSArray alloc] init];
+    NSURL *path = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    path = [path URLByAppendingPathComponent:[@"GoalSet" stringByAppendingString:self.goalType]];
+    temp = [NSArray arrayWithContentsOfURL:path];
+    if([temp count] == 2)
+    {
+        self.goals = [temp objectAtIndex:0];
+        self.size = [[temp objectAtIndex:1] intValue];
+    }
+}
+
+- (void) writeToFile
+{
+    NSURL *path = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    path = [path URLByAppendingPathComponent:[@"GoalSet" stringByAppendingString:self.goalType]];
+    NSArray *temp = [[NSArray alloc] initWithObjects:self.goals, [[NSNumber alloc] initWithInt:self.size], nil];
+    [temp writeToURL:path atomically:YES];
+}
+
 //must be called for proper initialization
 - (id) initWithType:(NSString *) type User:(UserStatus *) user
 {
@@ -84,6 +105,7 @@
         self.uncommonChance = kUncommonChance[self.chanceIndex];
         self.rareChance = kRareChance[self.chanceIndex];
         self.legendaryChance = kEpicChance[self.chanceIndex];
+        [self readFromFile];
     }
     return self;
 }
@@ -101,6 +123,7 @@
     [self.goals addObject:theGoal];
     [self.keys addObject:[[Goal alloc] initWithTitle:theGoal]];
     self.size++;
+    [self writeToFile];
 }
 
 - (void)deleteGoal:(NSString *)theGoal
@@ -108,6 +131,7 @@
     [self.goals removeObject:theGoal];
     [self.keys addObject:[[Goal alloc] initWithTitle:theGoal]];
     self.size--;
+    [self writeToFile];
 }
 
 //private

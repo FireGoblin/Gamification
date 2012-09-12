@@ -162,7 +162,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if(!self.theUser)
+    //if(!self.theUser)
         [self initVariables];
 	// Do any additional setup after loading the view, typically from a nib.
 }
