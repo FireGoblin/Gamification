@@ -60,12 +60,23 @@
     [super viewWillAppear:animated];
 }
 
+-(NSString *)timeDescription:(NSString *)original
+{
+    NSArray * holder = [[NSArray alloc] initWithArray:[original componentsSeparatedByString:@" "]];
+    NSMutableString * str = [[NSMutableString alloc] initWithString:@""];
+    for (int i = 1; i <= 5; i++) {
+        [str appendString:[holder objectAtIndex:i]];
+        [str appendString:@" "];
+    }
+    return str;
+}
+
 - (void)viewDidLoad
 {
     self.level.text = self.dataSource.theUser.level.stringValue;
     self.stacks.text = self.dataSource.theUser.stack.stringValue;
     if ([self.dataSource.theUser.stack intValue] != 0) {
-        self.timeLeft.text = self.dataSource.theUser.stackExpiration.description;
+        self.timeLeft.text = [self timeDescription:[self.dataSource.theUser.stackExpiration descriptionWithLocale:[NSLocale currentLocale]]];
     }
     else
         self.timeLeft.text = @"N/A";

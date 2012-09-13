@@ -42,7 +42,13 @@
 {
     NSURL *path = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
     path = [path URLByAppendingPathComponent:[@"RewardSet" stringByAppendingString:self.rewardType]];
-    NSArray *temp = [[NSArray alloc] initWithObjects:self.rewards, [[NSNumber alloc] initWithInt:self.size], [[NSNumber alloc] initWithInt:self.useSize], nil];
+    NSEnumerator *enumerator = [self.keys   objectEnumerator];
+    Reward *key;
+    NSMutableArray *rewardSet = [[NSMutableArray alloc] init];
+    while(key = [enumerator  nextObject]){
+        [rewardSet addObject:[key plist]];
+    }
+    NSArray *temp = [[NSArray alloc] initWithObjects:self.rewards, [[NSNumber alloc] initWithInt:self.size], [[NSNumber alloc] initWithInt:self.useSize], rewardSet, nil];
     //write temp to file
     //TODO: write keys
     [temp writeToURL:path atomically:YES];
@@ -54,11 +60,17 @@
     NSURL *path = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
     path = [path URLByAppendingPathComponent:[@"RewardSet" stringByAppendingString:self.rewardType]];
     temp = [NSArray arrayWithContentsOfURL:path];
-    if([temp count] == 3)
+    if([temp count] == 4)
     {
         self.rewards = [temp objectAtIndex:0];
         self.size = [[temp objectAtIndex:1] intValue];
         self.useSize = [[temp objectAtIndex:2] intValue];
+        NSArray * holder = [temp objectAtIndex:3];
+        NSEnumerator *enumerator = [holder objectEnumerator];
+        id key;
+        while (key = [enumerator nextObject]) {
+            [self.keys addObject:[[Reward alloc] initWithPlist:key]];
+        }
     //TODO: read keys
     }
 }

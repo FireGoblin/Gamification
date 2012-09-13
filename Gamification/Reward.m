@@ -21,6 +21,15 @@
     return self;
 }
 
+- (id) initWithPlist:(id)plist
+{
+    self = [super init];
+    if (self) {
+        self.title = plist;
+    }
+    return self;
+}
+
 - (BOOL) isEqual:(id)anObject
 {
     if([anObject class] != [Reward class])
@@ -38,6 +47,12 @@
 {
     Reward *copy = [[[self class] allocWithZone:zone] initWithTitle:self.title];
     return copy;
+}
+
+- (id)plist
+{
+    NSString *retval = self.title;
+    return retval;
 }
 
 @end

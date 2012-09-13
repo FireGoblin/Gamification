@@ -21,6 +21,15 @@
     return self;
 }
 
+- (id) initWithPlist:(id)plist
+{
+    self = [super init];
+    if (self) {
+        self.title = plist;
+    }
+    return self;
+}
+
 - (BOOL) isEqual:(id)anObject
 {
     if([anObject class] != [Goal class])
@@ -32,6 +41,12 @@
     
     //backup, should not hit
     return FALSE;
+}
+
+- (id)plist
+{
+    NSString * retval = self.title;
+    return retval;
 }
 
 @end

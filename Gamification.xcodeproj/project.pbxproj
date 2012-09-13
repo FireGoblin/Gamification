@@ -169,6 +169,10 @@
 			children = (
 				8FC14BDC1601661A0039CA2C /* master.png */,
 				8FC14BDE1601661B0039CA2C /* sword.jpg */,
+				8FC14BF716017B740039CA2C /* knight_mod.png */,
+				8FC14BF4160179FB0039CA2C /* white.png */,
+				8FC14BEB160169490039CA2C /* rock4.jpg */,
+				8FC14BE8160167400039CA2C /* merlin.jpg */,
 				8FC14B3E15E2EEF50039CA2C /* Gamification */,
 				8FC14B5C15E2EEF50039CA2C /* GamificationTests */,
 				8FC14B3715E2EEF50039CA2C /* Frameworks */,
@@ -200,10 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				8FC14B4A15E2EEF50039CA2C /* MainStoryboard.storyboard */,
-				8FC14BF716017B740039CA2C /* knight_mod.png */,
-				8FC14BF4160179FB0039CA2C /* white.png */,
-				8FC14BEB160169490039CA2C /* rock4.jpg */,
-				8FC14BE8160167400039CA2C /* merlin.jpg */,
 				8FC14B4715E2EEF50039CA2C /* GamificationAppDelegate.h */,
 				8FC14B4815E2EEF50039CA2C /* GamificationAppDelegate.m */,
 				8FC14B8515FB8F2B0039CA2C /* Constants.h */,

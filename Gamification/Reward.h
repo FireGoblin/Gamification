@@ -15,4 +15,7 @@
 - (id) initWithTitle:(NSString *)title;
 - (BOOL) isEqual:(id)anObject;
 
+- (id)plist;
+- (id) initWithPlist:(NSString *)plist;
+
 @end

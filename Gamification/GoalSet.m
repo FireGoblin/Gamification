@@ -59,10 +59,16 @@
     NSURL *path = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
     path = [path URLByAppendingPathComponent:[@"GoalSet" stringByAppendingString:self.goalType]];
     temp = [NSArray arrayWithContentsOfURL:path];
-    if([temp count] == 2)
+    if([temp count] == 3)
     {
         self.goals = [temp objectAtIndex:0];
         self.size = [[temp objectAtIndex:1] intValue];
+        NSArray * holder = [temp objectAtIndex:2];
+        NSEnumerator *enumerator = [holder objectEnumerator];
+        id key;
+        while (key = [enumerator nextObject]) {
+            [self.keys addObject:[[Goal alloc] initWithPlist:key]];
+        }
     }
 }
 
@@ -70,7 +76,13 @@
 {
     NSURL *path = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
     path = [path URLByAppendingPathComponent:[@"GoalSet" stringByAppendingString:self.goalType]];
-    NSArray *temp = [[NSArray alloc] initWithObjects:self.goals, [[NSNumber alloc] initWithInt:self.size], nil];
+    NSEnumerator *enumerator = [self.keys   objectEnumerator];
+    Goal *key;
+    NSMutableArray *goalSet = [[NSMutableArray alloc] init];
+    while(key = [enumerator  nextObject]){
+        [goalSet addObject:[key plist]];
+    }
+    NSArray *temp = [[NSArray alloc] initWithObjects:self.goals, [[NSNumber alloc] initWithInt:self.size], goalSet, nil];
     [temp writeToURL:path atomically:YES];
 }
 
