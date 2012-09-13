@@ -12,8 +12,8 @@
 
 @property (nonatomic, strong, readonly) NSString *rewardType;
 @property (nonatomic, strong, readonly) NSMutableDictionary *rewards;
-@property (nonatomic, readonly) int size;
-@property (nonatomic, readonly) int useSize;
+@property (nonatomic, readonly) NSInteger size;
+@property (nonatomic, readonly) NSInteger useSize;
 @property (nonatomic, strong, readonly) NSMutableSet *keys;
 
 - (void) useReward:(NSString *)theReward;

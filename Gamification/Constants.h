@@ -18,8 +18,8 @@ extern const double kRareChance[6];
 extern const double kEpicChance[6];
 
 extern const NSTimeInterval kExpirationTime;
-extern const int kMaxCount;
-extern const int kExpToLevelMap[51];
+extern const NSInteger kMaxCount;
+extern const NSInteger kExpToLevelMap[51];
 
 extern const int kMaxLevel;
 extern const double kStackValue;

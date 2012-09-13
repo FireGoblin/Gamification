@@ -14,7 +14,7 @@
 @property (nonatomic, strong, readonly) NSString *goalType;
 @property (nonatomic, strong, readonly) NSMutableArray *goals;
 @property (nonatomic, strong, readonly) UserStatus *theUser;
-@property (nonatomic, readonly) int size;
+@property (nonatomic, readonly) NSInteger size;
 @property (nonatomic, strong, readonly) NSMutableSet *keys;
 
 - (void) addGoal:(NSString *)theGoal;

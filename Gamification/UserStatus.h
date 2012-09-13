@@ -14,10 +14,12 @@
 @property (nonatomic, strong, readonly) NSNumber * level;
 @property (nonatomic, strong, readonly) NSNumber * stack;
 @property (nonatomic, strong, readonly) NSDate * stackExpiration;
+@property (nonatomic, strong, readonly) NSMutableArray * history;
 
 - (void) incrementExp:(int) x;
 - (void) incrementStack;
 - (BOOL) checkTime;
 - (float) getProgress;
+- (void) addToHistory:(NSString *)type;
 
 @end

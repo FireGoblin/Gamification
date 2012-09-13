@@ -174,6 +174,7 @@
 
 - (NSString *)performGoal
 {
+    [self.theUser addToHistory:self.goalType];
     [self gainExp];
     return [self rollForReward];
 }
