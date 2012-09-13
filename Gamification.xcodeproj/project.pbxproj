@@ -54,6 +54,18 @@
 		8FC14BD415FEE1DF0039CA2C /* DeleteRewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BD215FEE1DE0039CA2C /* DeleteRewardsViewController.m */; };
 		8FC14BD715FEF5AE0039CA2C /* UseRewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BD615FEF5AD0039CA2C /* UseRewardsViewController.m */; };
 		8FC14BD815FEF5AE0039CA2C /* UseRewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC14BD615FEF5AD0039CA2C /* UseRewardsViewController.m */; };
+		8FC14BDF1601661B0039CA2C /* master.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC14BDC1601661A0039CA2C /* master.png */; };
+		8FC14BE01601661B0039CA2C /* master.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC14BDC1601661A0039CA2C /* master.png */; };
+		8FC14BE31601661B0039CA2C /* sword.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8FC14BDE1601661B0039CA2C /* sword.jpg */; };
+		8FC14BE41601661B0039CA2C /* sword.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8FC14BDE1601661B0039CA2C /* sword.jpg */; };
+		8FC14BE9160167400039CA2C /* merlin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8FC14BE8160167400039CA2C /* merlin.jpg */; };
+		8FC14BEA160167400039CA2C /* merlin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8FC14BE8160167400039CA2C /* merlin.jpg */; };
+		8FC14BEC1601694A0039CA2C /* rock4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8FC14BEB160169490039CA2C /* rock4.jpg */; };
+		8FC14BED1601694A0039CA2C /* rock4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8FC14BEB160169490039CA2C /* rock4.jpg */; };
+		8FC14BF5160179FB0039CA2C /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC14BF4160179FB0039CA2C /* white.png */; };
+		8FC14BF6160179FB0039CA2C /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC14BF4160179FB0039CA2C /* white.png */; };
+		8FC14BF816017B750039CA2C /* knight_mod.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC14BF716017B740039CA2C /* knight_mod.png */; };
+		8FC14BF916017B750039CA2C /* knight_mod.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC14BF716017B740039CA2C /* knight_mod.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +132,12 @@
 		8FC14BD215FEE1DE0039CA2C /* DeleteRewardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteRewardsViewController.m; sourceTree = "<group>"; };
 		8FC14BD515FEF5AD0039CA2C /* UseRewardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseRewardsViewController.h; sourceTree = "<group>"; };
 		8FC14BD615FEF5AD0039CA2C /* UseRewardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseRewardsViewController.m; sourceTree = "<group>"; };
+		8FC14BDC1601661A0039CA2C /* master.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = master.png; sourceTree = "<group>"; };
+		8FC14BDE1601661B0039CA2C /* sword.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sword.jpg; sourceTree = "<group>"; };
+		8FC14BE8160167400039CA2C /* merlin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = merlin.jpg; sourceTree = SOURCE_ROOT; };
+		8FC14BEB160169490039CA2C /* rock4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rock4.jpg; sourceTree = SOURCE_ROOT; };
+		8FC14BF4160179FB0039CA2C /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = SOURCE_ROOT; };
+		8FC14BF716017B740039CA2C /* knight_mod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knight_mod.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +167,8 @@
 		8FC14B2915E2EEF50039CA2C = {
 			isa = PBXGroup;
 			children = (
+				8FC14BDC1601661A0039CA2C /* master.png */,
+				8FC14BDE1601661B0039CA2C /* sword.jpg */,
 				8FC14B3E15E2EEF50039CA2C /* Gamification */,
 				8FC14B5C15E2EEF50039CA2C /* GamificationTests */,
 				8FC14B3715E2EEF50039CA2C /* Frameworks */,
@@ -180,6 +200,10 @@
 			isa = PBXGroup;
 			children = (
 				8FC14B4A15E2EEF50039CA2C /* MainStoryboard.storyboard */,
+				8FC14BF716017B740039CA2C /* knight_mod.png */,
+				8FC14BF4160179FB0039CA2C /* white.png */,
+				8FC14BEB160169490039CA2C /* rock4.jpg */,
+				8FC14BE8160167400039CA2C /* merlin.jpg */,
 				8FC14B4715E2EEF50039CA2C /* GamificationAppDelegate.h */,
 				8FC14B4815E2EEF50039CA2C /* GamificationAppDelegate.m */,
 				8FC14B8515FB8F2B0039CA2C /* Constants.h */,
@@ -325,6 +349,12 @@
 			files = (
 				8FC14B4315E2EEF50039CA2C /* InfoPlist.strings in Resources */,
 				8FC14B4C15E2EEF50039CA2C /* MainStoryboard.storyboard in Resources */,
+				8FC14BDF1601661B0039CA2C /* master.png in Resources */,
+				8FC14BE31601661B0039CA2C /* sword.jpg in Resources */,
+				8FC14BE9160167400039CA2C /* merlin.jpg in Resources */,
+				8FC14BEC1601694A0039CA2C /* rock4.jpg in Resources */,
+				8FC14BF5160179FB0039CA2C /* white.png in Resources */,
+				8FC14BF816017B750039CA2C /* knight_mod.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +363,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FC14B6115E2EEF50039CA2C /* InfoPlist.strings in Resources */,
+				8FC14BE01601661B0039CA2C /* master.png in Resources */,
+				8FC14BE41601661B0039CA2C /* sword.jpg in Resources */,
+				8FC14BEA160167400039CA2C /* merlin.jpg in Resources */,
+				8FC14BED1601694A0039CA2C /* rock4.jpg in Resources */,
+				8FC14BF6160179FB0039CA2C /* white.png in Resources */,
+				8FC14BF916017B750039CA2C /* knight_mod.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

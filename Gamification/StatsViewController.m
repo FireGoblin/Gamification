@@ -55,12 +55,22 @@
 }
 */
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
 - (void)viewDidLoad
 {
     self.level.text = self.dataSource.theUser.level.stringValue;
     self.stacks.text = self.dataSource.theUser.stack.stringValue;
-    self.timeLeft.text = self.dataSource.theUser.stackExpiration.description;
+    if ([self.dataSource.theUser.stack intValue] != 0) {
+        self.timeLeft.text = self.dataSource.theUser.stackExpiration.description;
+    }
+    else
+        self.timeLeft.text = @"N/A";
     self.progress.progress = self.dataSource.theUser.getProgress;
+    
 }
 
 - (void)viewDidUnload
