@@ -43,6 +43,7 @@
     return FALSE;
 }
 
+//Implemented for NSCopying protocol
 - (id)copyWithZone:(NSZone *)zone
 {
     Reward *copy = [[[self class] allocWithZone:zone] initWithTitle:self.title];

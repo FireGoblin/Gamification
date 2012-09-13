@@ -10,12 +10,12 @@
 
 @interface Goal : NSObject
 
-@property (nonatomic, strong)NSString *title;
+@property (nonatomic, strong)NSString *title;   //title of the goal
 
 - (id) initWithTitle:(NSString *)title;
-- (BOOL) isEqual:(id)anObject;
+- (BOOL) isEqual:(id)anObject;              
 
-- (id)plist;
+- (id)plist;    //returns a property list representation of Goal
 - (id) initWithPlist:(NSString *)plist;
 
 @end

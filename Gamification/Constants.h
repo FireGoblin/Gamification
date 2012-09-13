@@ -11,20 +11,21 @@
 
 
 //GoalSet
-extern const int kExpGain[6];
-extern const double kCommonChance[6];
-extern const double kUncommonChance[6];
-extern const double kRareChance[6];
-extern const double kEpicChance[6];
+extern const int kExpGain[6];               //amount of exp to gain for each type of goal
+extern const double kCommonChance[6];       //base chance to get common reward for each goal
+extern const double kUncommonChance[6];     //base chance to get common reward for each goal
+extern const double kRareChance[6];         //base chance to get common reward for each goal
+extern const double kEpicChance[6];         //base chance to get common reward for each goal
 
-extern const NSTimeInterval kExpirationTime;
-extern const NSInteger kMaxCount;
-extern const NSInteger kExpToLevelMap[51];
+extern const NSTimeInterval kExpirationTime;    //how long stack lasts
+extern const NSInteger kMaxCount;               //maximum size of stack
+extern const NSInteger kExpToLevelMap[51];      //array of the minimum exp for each level
 
-extern const int kMaxLevel;
-extern const double kStackValue;
-extern const double kLevelValue;
+extern const int kMaxLevel;                     //the maximum level
+extern const double kStackValue;                //The fraction increase in chance to receive reward for each stack
+extern const double kLevelValue;                //The fraction increase in chance to receive reward for each level
 
+//name corresponds to index into goalset constant arrays
 typedef enum{
     Everyday,
     Tiny,
@@ -34,6 +35,7 @@ typedef enum{
     Epic
 } goalsize;
 
+//name corresponds to index into rewardset contant arrays (currently none)
 typedef enum{
     Common,
     Uncommon,

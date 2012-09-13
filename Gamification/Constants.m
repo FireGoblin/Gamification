@@ -21,12 +21,6 @@ const double kEpicChance[6] = {.00001, .0001, .0005, .0025, .0125, .125};
 const NSTimeInterval kExpirationTime = 1296000;  //15 days
 const int kMaxCount = 10;
 
-//x^2 + 9x + 90 increase with each level
-//const int kExpToLevelMap[51] = 
-//[0,     100,    212,    338,    480,    640,    820,    1022,   1248,   1500,   1780,
-//        2090,   2432,   2808,   3220,   3670,   4160,   4692,   5268,   5890,   6560,
-
-
 //10x + 90 increase with each level
 const int kExpToLevelMap[51] =
 {0,     100,    210,    330,    460,    600,    750,    910,    1080,   1260,   1450,
