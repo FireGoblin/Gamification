@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F0F97111602E0BE00C01DE8 /* master.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F0F97101602E0BE00C01DE8 /* master.jpg */; };
 		8FC14B3915E2EEF50039CA2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC14B3815E2EEF50039CA2C /* UIKit.framework */; };
 		8FC14B3B15E2EEF50039CA2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC14B3A15E2EEF50039CA2C /* Foundation.framework */; };
 		8FC14B3D15E2EEF50039CA2C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC14B3C15E2EEF50039CA2C /* CoreGraphics.framework */; };
@@ -79,6 +80,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F0F97101602E0BE00C01DE8 /* master.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = master.jpg; sourceTree = SOURCE_ROOT; };
 		8FC14B3415E2EEF50039CA2C /* Gamification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gamification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC14B3815E2EEF50039CA2C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8FC14B3A15E2EEF50039CA2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -172,6 +174,7 @@
 				8FC14BF716017B740039CA2C /* knight_mod.png */,
 				8FC14BF4160179FB0039CA2C /* white.png */,
 				8FC14BEB160169490039CA2C /* rock4.jpg */,
+				8F0F97101602E0BE00C01DE8 /* master.jpg */,
 				8FC14BE8160167400039CA2C /* merlin.jpg */,
 				8FC14B3E15E2EEF50039CA2C /* Gamification */,
 				8FC14B5C15E2EEF50039CA2C /* GamificationTests */,
@@ -322,7 +325,7 @@
 		8FC14B2B15E2EEF50039CA2C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0440;
 			};
 			buildConfigurationList = 8FC14B2E15E2EEF50039CA2C /* Build configuration list for PBXProject "Gamification" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -355,6 +358,7 @@
 				8FC14BEC1601694A0039CA2C /* rock4.jpg in Resources */,
 				8FC14BF5160179FB0039CA2C /* white.png in Resources */,
 				8FC14BF816017B750039CA2C /* knight_mod.png in Resources */,
+				8F0F97111602E0BE00C01DE8 /* master.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +605,7 @@
 				8FC14B6915E2EEF50039CA2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FC14B6A15E2EEF50039CA2C /* Build configuration list for PBXNativeTarget "GamificationTests" */ = {
 			isa = XCConfigurationList;
@@ -609,6 +614,7 @@
 				8FC14B6C15E2EEF50039CA2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

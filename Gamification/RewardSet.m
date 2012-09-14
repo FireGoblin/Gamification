@@ -62,7 +62,7 @@
     temp = [NSArray arrayWithContentsOfURL:path];
     if([temp count] == 4)
     {
-        self.rewards = [temp objectAtIndex:0];
+        self.rewards = [[temp objectAtIndex:0] mutableCopy];
         self.size = [[temp objectAtIndex:1] intValue];
         self.useSize = [[temp objectAtIndex:2] intValue];
         NSArray * holder = [temp objectAtIndex:3];

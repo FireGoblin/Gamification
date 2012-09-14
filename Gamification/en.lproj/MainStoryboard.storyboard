@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PMm-SC-hEJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PMm-SC-hEJ">
     <dependencies>
-        <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+        <deployment defaultVersion="1296" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
     </dependencies>
     <scenes>
+        <!--Gamification View Controller - Gamify Your Life-->
         <scene sceneID="UaZ-fp-Ck0">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTr-EB-QOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -13,7 +14,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="master.png" id="m4g-Lr-aKc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="master.jpg" id="m4g-Lr-aKc">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -85,6 +86,7 @@
             </objects>
             <point key="canvasLocation" x="27" y="103"/>
         </scene>
+        <!--Rewards View Controller - Rewards-->
         <scene sceneID="uJf-JE-V7n">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etc-Al-fAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -153,6 +155,7 @@
             </objects>
             <point key="canvasLocation" x="655" y="932"/>
         </scene>
+        <!--Navigation Controller-->
         <scene sceneID="Z2V-g2-sII">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Zy-ZO-3G0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -167,6 +170,7 @@
             </objects>
             <point key="canvasLocation" x="-629" y="93"/>
         </scene>
+        <!--Use Rewards View Controller - Use "X" Rewards-->
         <scene sceneID="v4j-6K-FJf">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zkn-rZ-aZj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -215,6 +219,7 @@
             </objects>
             <point key="canvasLocation" x="1697" y="378"/>
         </scene>
+        <!--Stats View Controller - Current Stats-->
         <scene sceneID="KhL-zt-fY9">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gcj-c7-jmx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -314,6 +319,7 @@
             </objects>
             <point key="canvasLocation" x="655" y="-219"/>
         </scene>
+        <!--Goals View Controller - Goals-->
         <scene sceneID="tsB-HN-pPp">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m1d-Wx-vCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -382,6 +388,7 @@
             </objects>
             <point key="canvasLocation" x="655" y="-826"/>
         </scene>
+        <!--Specific Goals View Controller - "X" Goals-->
         <scene sceneID="g9p-ld-f8X">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1d-X9-II0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -546,6 +553,7 @@
             </objects>
             <point key="canvasLocation" x="1077" y="-826"/>
         </scene>
+        <!--Delete Goals View Controller - Delete "X" Goals-->
         <scene sceneID="7kC-6b-qU8">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQ5-Yb-jiR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -587,6 +595,7 @@
             </objects>
             <point key="canvasLocation" x="1697" y="-219"/>
         </scene>
+        <!--View Controller - About-->
         <scene sceneID="Iaw-hu-Oj2">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOY-TY-W0q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -607,6 +616,7 @@
             </objects>
             <point key="canvasLocation" x="655" y="363"/>
         </scene>
+        <!--Specific Rewards View Controller - "X" Rewards-->
         <scene sceneID="ZTI-6r-ZX8">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pY6-eP-7qj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -725,6 +735,7 @@
             </objects>
             <point key="canvasLocation" x="1077" y="932"/>
         </scene>
+        <!--Add Rewards View Controller - Add "X" Rewards-->
         <scene sceneID="8Ce-Kz-wvT">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UlO-Mw-AUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -777,6 +788,7 @@
             </objects>
             <point key="canvasLocation" x="1697" y="932"/>
         </scene>
+        <!--Delete Rewards View Controller - Delete "X" Rewards-->
         <scene sceneID="gdO-1N-4gg">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oj4-N6-nM3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -821,6 +833,7 @@
             </objects>
             <point key="canvasLocation" x="1697" y="1501"/>
         </scene>
+        <!--Add Goals View Controller - Add "X" Goals-->
         <scene sceneID="fvL-2L-adB">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FKP-nX-xdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -873,6 +886,7 @@
             </objects>
             <point key="canvasLocation" x="1697" y="-831"/>
         </scene>
+        <!--Complete Goals View Controller - Complete "X" Goals-->
         <scene sceneID="ojn-Fg-ztV">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1W-Kq-q2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -917,12 +931,102 @@
     </scenes>
     <resources>
         <image name="knight_mod.png" width="325" height="591"/>
-        <image name="master.png" width="320" height="480"/>
+        <image name="master.jpg" width="373" height="413"/>
         <image name="merlin.jpg" width="300" height="430"/>
         <image name="rock4.jpg" width="350" height="331"/>
         <image name="sword.jpg" width="320" height="480"/>
         <image name="white.png" width="320" height="480"/>
     </resources>
+    <classes>
+        <class className="AddGoalsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddGoalsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonPressed:"/>
+                <relationship kind="outlet" name="goalTitle" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="viewTitle" candidateClass="UINavigationItem"/>
+            </relationships>
+        </class>
+        <class className="AddRewardsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddRewardsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonPressed:"/>
+                <relationship kind="outlet" name="rewardTitle" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="viewTitle" candidateClass="UINavigationItem"/>
+            </relationships>
+        </class>
+        <class className="CompleteGoalsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CompleteGoalsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="viewTitle" candidateClass="UINavigationItem"/>
+            </relationships>
+        </class>
+        <class className="DeleteGoalsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DeleteGoalsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="viewTitle" candidateClass="UINavigationItem"/>
+            </relationships>
+        </class>
+        <class className="DeleteRewardsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DeleteRewardsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="viewTitle" candidateClass="UINavigationItem"/>
+            </relationships>
+        </class>
+        <class className="GamificationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GamificationViewController.h"/>
+        </class>
+        <class className="GoalsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoalsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonPressed:"/>
+            </relationships>
+        </class>
+        <class className="RewardsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RewardsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonPressed:"/>
+            </relationships>
+        </class>
+        <class className="SpecificGoalsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SpecificGoalsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonPressed:"/>
+                <relationship kind="outlet" name="epicLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="everydayLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="largeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mediumLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="smallLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tinyLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="viewTitle" candidateClass="UINavigationItem"/>
+            </relationships>
+        </class>
+        <class className="SpecificRewardsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SpecificRewardsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonPressed:"/>
+                <relationship kind="outlet" name="commonLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="legendaryLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="rareLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="uncommonLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="viewTitle" candidateClass="UINavigationItem"/>
+            </relationships>
+        </class>
+        <class className="StatsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StatsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="level" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="progress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="stacks" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLeft" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="UseRewardsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UseRewardsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="viewTitle" candidateClass="UINavigationItem"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
